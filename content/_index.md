@@ -42,7 +42,7 @@ I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academi
 - Jingxia Jiang, Now PhD Student@NC State
 
 
-## 🎖 Competitions & Awards & Presentations
+## 🎖 Competitions & Awards 
 
 - ICLR 2025 Notable Reviewer
 - KAUST AI Rising Star, 2025

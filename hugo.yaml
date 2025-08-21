@@ -72,13 +72,15 @@ params:
   
   socialIcons:
     - name: email
-      url: ""
+      url: "tye610@connect.hkust-gz.edu.cn"
     - name: github
-      url: "https://github.com/owen718"
-    # - name: googlescholar
-    #   url: "https://scholar.google.com/citations?user=_B6D-wkAAAAJ"
-    # - name: linkedin
-    #   url: "https://www.linkedin.com/in/hsinyinglee"
+      url: "https://github.com/Owen718"
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?user=1sGXZ-wAAAAJ&hl=en"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/tian-ye-823053252/"
+    # - name: huggingface
+    #   url: "https://huggingface.co/Owen777"
 
   analytics:
     google:
