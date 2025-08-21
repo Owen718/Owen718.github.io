@@ -1,5 +1,5 @@
 baseURL: "https://owen718.github.io/"
-title: Tian YE | 叶田
+title: Tian YE@HKUST(GZ)
 pagination: 
   pagerSize: 20
 theme: PaperMod
@@ -17,11 +17,11 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Tian YE | 叶田
+  title: Tian YE
   description: "Computer Vision Researcher"
   keywords: ["computer vision", "deep learning", "researcher"]
   author: Tian YE
-  images: ["imgs/profile.jpg"]
+  # images: ["imgs/profile.jpg"]
   defaultTheme: light
   disableThemeToggle: false
 
@@ -60,7 +60,14 @@ params:
   profileMode:
     enabled: false # needs to be explicitly set
   
-  # home-info mode disabled
+  # home-info mode
+  homeInfoParams:
+    Title: Tian YE 
+    Content: ""
+    imageUrl: "/snow_personal.jpg"
+    imageTitle: profile
+    imageWidth: 240
+    imageHeight: 200
   
   socialIcons:
     - name: email
