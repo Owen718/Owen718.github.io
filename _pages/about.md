@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 ## 👋 About Me
-I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Currently, I am working closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [Magic 1-For-1](https://magic-141.github.io/Magic-141/), [MagicInfinite](https://magicinfinite.github.io)).
+I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Previously, I worked closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [Magic 1-For-1](https://magic-141.github.io/Magic-141/), [MagicInfinite](https://magicinfinite.github.io)).
 
 <div id="motto" class="typed-motto"></div>
 
@@ -727,6 +727,8 @@ I am very lucky to work with the following talented students:
 
   International Journal of Computer Vision
   
+  IEEE Transactions on Image Processing
+
   IEEE Signal Processing Letter
 
   IEEE Journal of Oceanic Engineering
@@ -735,6 +737,8 @@ I am very lucky to work with the following talented students:
 # 📖 Educations&Experience
 
 - Aug'2024-Present: PhD Student, The Hong Kong University of Science and Technology, Guangzhou.
+
+- Nov'2024-Aug'2025: Research Scientist Intern, Hedra Inc. .
 
 - Jun'2023-Jul'2024: Research Assistant, The Hong Kong University of Science and Technology, Guangzhou.
   
