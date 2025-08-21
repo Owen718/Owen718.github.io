@@ -1,5 +1,5 @@
 baseURL: "https://owen718.github.io/"
-title: Tian YE@HKUST(GZ)
+title: Tian YE@HKUST,Guangzhou
 pagination: 
   pagerSize: 20
 theme: PaperMod
@@ -62,12 +62,13 @@ params:
   
   # home-info mode
   homeInfoParams:
-    Title: Tian YE 
-    Content: ""
+    Title: Tian (Owen) YE 
+    Content: 
+      PhD Student | AIGC • Foundation Model
     imageUrl: "/snow_personal.jpg"
     imageTitle: profile
-    imageWidth: 240
-    imageHeight: 200
+    imageWidth: 360
+    imageHeight: 240
   
   socialIcons:
     - name: email
