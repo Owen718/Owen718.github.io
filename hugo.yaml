@@ -45,9 +45,9 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "/favicon.ico"
-    favicon16x16: "/favicon-16x16.png"
-    favicon32x32: "/favicon-32x32.png"
+    favicon: "/hkust_logo_blue.jpg"
+    favicon16x16: "/hkust_logo_blue.jpg"
+    favicon32x32: "/hkust_logo_blue.jpg"
     apple_touch_icon: "/hkust_logo_blue.jpg"
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
