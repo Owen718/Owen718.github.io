@@ -22,7 +22,7 @@ params:
   keywords: ["computer vision", "deep learning", "researcher"]
   author: Tian YE
   # images: ["imgs/profile.jpg"]
-  defaultTheme: light
+  defaultTheme: dark
   disableThemeToggle: false
 
   ShowOnlySelectedPubs: true

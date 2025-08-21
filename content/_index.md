@@ -56,7 +56,11 @@ I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academi
 
 - Conference Reviewer: ACCV 2022&2024, WACV 2023&2024, BMVC 2023&2024, AAAI 2022&2023&2024&2025, ICCV 2023, CVPR 2024, ECCV 2024, ACM MM 2024, NeurIPS 2024, ICLR 2025, ICML 2025.
 - Workshop Competition Organizer: [LOVEU@CVPR 2024](https://sites.google.com/view/loveucvpr24/track1)
-- Journal Reviewer: International Journal of Computer Vision; IEEE Transactions on Image Processing; IEEE Signal Processing Letter; IEEE Journal of Oceanic Engineering
+- Journal Reviewer: 
+  International Journal of Computer Vision
+  IEEE Transactions on Image Processing
+  IEEE Signal Processing Letter
+  IEEE Journal of Oceanic Engineering
 
 
 ## 📖 Educations & Experience

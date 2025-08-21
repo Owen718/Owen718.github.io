@@ -1,0 +1,15 @@
+<script>
+// Random background from /static/imgs/backgrounds
+(function(){
+  try {
+    var list = [
+      '/imgs/backgrounds/pexels-david-pinheiro-1877451-5793517.jpg',
+      '/imgs/backgrounds/pexels-john-callery-3749962-5707111.jpg',
+    ];
+    // If you add more images, just extend the list above with their paths
+    var pick = list[Math.floor(Math.random() * list.length)];
+    document.documentElement.style.setProperty('--site-bg-image', 'url(' + pick + ')');
+  } catch (e) {}
+})();
+</script>
+
