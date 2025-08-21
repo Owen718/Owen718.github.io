@@ -32,3 +32,37 @@
 }
 
 
+/* ------- Post content section styling (cards + headings) ------- */
+.post-content { max-width: 1200px; margin: 0 auto; }
+.post-content h2 {
+  font-size: 26px;
+  margin: 32px 0 12px;
+  scroll-margin-top: 90px;
+}
+/* 优雅细边框：标题后的第一个块元素作为区块容器 */
+.post-content h2 + p,
+.post-content h2 + ul,
+.post-content h2 + div {
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 12px;
+  padding: 22px 26px;
+  padding-left: 30px;
+  background: rgba(0,0,0,0.03);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 10px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.45);
+  margin-bottom: 18px;
+}
+
+/* 暗色模式：提高对比度与阴影 */
+body.dark .post-content h2 + p,
+body.dark .post-content h2 + ul,
+body.dark .post-content h2 + div {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.14);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+/* 列表可读性 */
+.post-content ul { margin: 8px 0 14px; padding-left: 1.4em; }
+/* 卡片内的首个列表左侧缩进再加大，避免圆点贴边 */
+.post-content h2 + ul { padding-left: 34px; }
+.post-content li { margin: 8px 0; line-height: 1.7; }
+
