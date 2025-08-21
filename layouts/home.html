@@ -1,0 +1,21 @@
+{{- define "main" }}
+
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- partial "index_profile.html" . }}
+{{- else }}
+
+{{- if site.Params.homeInfoParams }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+{{ .Content }}
+</div>
+{{- end }}
+
+{{- end }}
+
+{{- end }}
+
+

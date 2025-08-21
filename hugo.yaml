@@ -1,5 +1,5 @@
 baseURL: "https://owen718.github.io/"
-title: Lee Hsin-Ying
+title: Tian YE | 叶田
 pagination: 
   pagerSize: 20
 theme: PaperMod
@@ -48,27 +48,19 @@ params:
     favicon: "/favicon.ico"
     favicon16x16: "/favicon-16x16.png"
     favicon32x32: "/favicon-32x32.png"
-    apple_touch_icon: "/apple-touch-icon.png"
+    apple_touch_icon: "/hkust_logo_blue.jpg"
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
   label:
     text:
-    icon: /apple-touch-icon.png
+    icon: /hkust_logo_blue.jpg
     iconHeight: 
 
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-
-  # home-info mode
-  homeInfoParams:
-    Title: Tian YE \
-    Content: |
-      I am a first-year PhD student at the Hong Kong University of Science and Technology, Guangzhou.
-    imageUrl: "imgs/profile.jpg"
-    imageTitle: profile
-    imageWidth: 120
-    imageHeight: 120
+  
+  # home-info mode disabled
   
   socialIcons:
     - name: email
