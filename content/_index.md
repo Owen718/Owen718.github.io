@@ -15,6 +15,7 @@ I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academi
 
 
 ## 📰 News
+- [2025-08] Our [Style LoRA series](https://huggingface.co/Owen777/Kontext-Style-Loras) for the FLUX.1 Kontext model has surpassed 30K downloads and 100+ likes on Hugging Face！🎉🎉 [Demo and LoRAs](https://huggingface.co/Kontext-Style).
 - [2025-08] [MovieChat+](https://arxiv.org/pdf/2404.17176?) is accepted by IEEE TPAMI 2025.
 - [2025-08] I am pleased to release [Flux.1-lite-8B-GRPO](https://huggingface.co/Owen777/flux.1-lite-8B-GRPO). A RL Post-training high-quality model based on Flux.1 Lite.
 - [2025-06] 3 Papers are accepted by ICCV 2025.
