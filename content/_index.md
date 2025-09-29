@@ -5,8 +5,10 @@ layout: "home"
 
 ## 👋 About Me
 
-I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Previously, I worked closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [Magic 1-For-1](https://magic-141.github.io/Magic-141/), [MagicInfinite](https://magicinfinite.github.io)).
+I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Previously, I worked closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [MagicInfinite](https://magicinfinite.github.io)). 
 
+
+I am a core contributor and project lead of several large-scale generative models, including [MagicInfinite](https://magicinfinite.github.io), [Meissonic](https://arxiv.org/abs/2410.08261), [LucidFlux](https://w2genai-lab.github.io/LucidFlux/), and [PosterCraft](https://ephemeral182.github.io/PosterCraft/).
 
 ## 🔬 Research Interests
 
@@ -15,7 +17,7 @@ I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academi
 
 
 ## 📰 News
-- [2025-09] We release [LucidFlux-14B:Caption-Free Universal Image Restoration with a Large-Scale Diffusion Transformer](https://w2genai-lab.github.io/LucidFlux/). A SOTA Universal Image Restoration DiT Model!
+- [2025-09] We release [LucidFlux-14B:Caption-Free Universal Image Restoration via a Large-Scale Diffusion Transformer](https://w2genai-lab.github.io/LucidFlux/). A SOTA Universal Image Restoration DiT Model!
 - [2025-08] Our [Style LoRA series](https://huggingface.co/Owen777/Kontext-Style-Loras) for the FLUX.1 Kontext model has surpassed 30K downloads and 100+ likes on Hugging Face！🎉🎉 [Demo and LoRAs](https://huggingface.co/Kontext-Style).
 - [2025-08] [MovieChat+](https://arxiv.org/pdf/2404.17176?) is accepted by IEEE TPAMI 2025.
 - [2025-08] I am pleased to release [Flux.1-lite-8B-GRPO](https://huggingface.co/Owen777/flux.1-lite-8B-GRPO). A RL Post-training high-quality model based on Flux.1 Lite.
@@ -25,13 +27,9 @@ I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academi
 - [2025-02] 3 Papers are accepted by CVPR 2025.
 - [2025-02] We are pleased to announce the release [Magic 1-For-1](https://magic-141.github.io/Magic-141/), a SOTA, *4-step image-to-video diffusion model*, along with our technical report.
 - [2025-01] I am honored to be selected as a speaker at [KAUST Rising Stars in AI Symposium 2025](https://www.kaust.edu.sa/en/news/rising-stars-in-ai-symposium-2025)!! Thank you KAUST for the opportunity!
-- [2025-01] Meissonic is accepted by ICLR 2025🎉.
-- [2024-12] 4 Papers are accepted by AAAI 2025.
 - [2024-11] I am honored to be selected as a Outstanding Reviewer for BMVC 2024！
 - [2024-11] We release Meissonic on HuggingFace🎉, Meissonic-1B is the first SDXL level, high-resolution non-AR T2I model!!
 - [2024-09] 2 Papers are accepted by ECCV 2024.
-- [2024-06] 2 Papers are accepted by MICCAI 2024, and Segmamba is selected as a Spotlight presentation paper.
-
 
  
  
