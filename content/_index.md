@@ -6,8 +6,6 @@ layout: "home"
 ## 👋 About Me
 
 I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Previously, I worked closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [MagicInfinite](https://magicinfinite.github.io)). 
-
-
 I am a core contributor and project lead of several large-scale generative models, including [MagicInfinite](https://magicinfinite.github.io), [Meissonic](https://arxiv.org/abs/2410.08261), [LucidFlux](https://w2genai-lab.github.io/LucidFlux/), and [PosterCraft](https://ephemeral182.github.io/PosterCraft/).
 
 ## 🔬 Research Interests
