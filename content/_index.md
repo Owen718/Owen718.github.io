@@ -5,8 +5,7 @@ layout: "home"
 
 ## 👋 About Me
 
-I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Previously, I worked closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [MagicInfinite](https://magicinfinite.github.io)). 
-I am a core contributor or project leader of several large-scale generative models, including [MagicInfinite](https://magicinfinite.github.io), [Meissonic](https://arxiv.org/abs/2410.08261), [LucidFlux](https://w2genai-lab.github.io/LucidFlux/), and [PosterCraft](https://ephemeral182.github.io/PosterCraft/).
+I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Previously, I worked closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [MagicInfinite](https://magicinfinite.github.io)). I am a core contributor or project leader of several large-scale generative models, including [MagicInfinite](https://magicinfinite.github.io), [Meissonic](https://arxiv.org/abs/2410.08261), [LucidFlux](https://w2genai-lab.github.io/LucidFlux/), and [PosterCraft](https://ephemeral182.github.io/PosterCraft/). I am also an AIGC Researcher (Research Affiliate) at [First-Intelligence Inc.](https://first-intelligence.com/), working on video generation and video editing.
 
 ## 🔬 Research Interests
 
@@ -33,11 +32,11 @@ I am a core contributor or project leader of several large-scale generative mode
  
 ## Mentoring
 
-- Heming Li, RA@HKUST(GZ), B.S.@CUHK
+<!-- - Heming Li, RA@HKUST(GZ), B.S.@CUHK -->
 - Song Fei, Mphil Student@HKUST(GZ)
-- Haoxuan Feng, Mphil Student@HKUST(GZ)
+<!-- - Haoxuan Feng, Mphil Student@HKUST(GZ)
 - Chenghao Xue, Now MSc Student@UC Davis
-- Jingxia Jiang, Now PhD Student@NC State
+- Jingxia Jiang, Now PhD Student@NC State -->
 
 
 ## 🎖 Competitions & Awards 
@@ -67,4 +66,3 @@ I am a core contributor or project leader of several large-scale generative mode
 - Nov'2024–Aug'2025: Research Scientist Intern, Hedra Inc.
 - Jun'2023–Jul'2024: Research Assistant, The Hong Kong University of Science and Technology, Guangzhou
 - Sep'2019–Jul'2023: B.Eng (Telecommunication Engineering), Jimei University, Xiamen
-
