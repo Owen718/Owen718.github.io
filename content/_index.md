@@ -15,7 +15,7 @@ At present, I serve as an external AIGC Researcher / Research Affiliate at [Firs
 
 
 ## 📰 News
-- [2025-19] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
+- [2025-11] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
 Generation across Diverse Aspect Ratios](https://github.com/W2GenAI-Lab/UltraFlux). A SOTA Native 4K Generation Model!
 - [2025-09] We release [LucidFlux-14B:Caption-Free Universal Image Restoration via a Large-Scale Diffusion Transformer](https://w2genai-lab.github.io/LucidFlux/). A SOTA Universal Image Restoration DiT Model!
 - [2025-08] Our [Style LoRA series](https://huggingface.co/Owen777/Kontext-Style-Loras) for the FLUX.1 Kontext model has surpassed 30K downloads and 100+ likes on Hugging Face！🎉🎉 [Demo and LoRAs](https://huggingface.co/Kontext-Style).
