@@ -5,7 +5,7 @@ layout: "home"
 
 ## 👋 About Me
 
-I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Previously, I worked closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [MagicInfinite](https://magicinfinite.github.io)). I am a core contributor or project leader of several large-scale generative models, including [MagicInfinite](https://magicinfinite.github.io), [Meissonic](https://arxiv.org/abs/2410.08261), [LucidFlux](https://w2genai-lab.github.io/LucidFlux/), [PosterCraft](https://ephemeral182.github.io/PosterCraft/), [UltraFlux](https://github.com/W2GenAI-Lab/UltraFlux).
+I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. Previously, I worked closely with [Dr. Hongwei Yi](https://xyyhw.top/) (Head of Research@[Hedra](https://www.hedra.com/)) to explore and develop Foundational Video Generation Models (e.g., [MagicInfinite](https://magicinfinite.github.io)). I am a core contributor or project leader of several large-scale generative models, including [MagicInfinite](https://magicinfinite.github.io), [Meissonic](https://arxiv.org/abs/2410.08261), [LucidFlux](https://w2genai-lab.github.io/LucidFlux/), [PosterCraft](https://ephemeral182.github.io/PosterCraft/) and [UltraFlux](https://w2genai-lab.github.io/UltraFlux/).
 At present, I serve as an external AIGC Researcher / Research Affiliate at [First-Intelligence Inc](https://first-intelligence.com/), working on video generation and video editing.
 
 ## 🔬 Research Interests
@@ -16,7 +16,7 @@ At present, I serve as an external AIGC Researcher / Research Affiliate at [Firs
 
 ## 📰 News
 - [2025-11] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
-Generation across Diverse Aspect Ratios](https://github.com/W2GenAI-Lab/UltraFlux). A SOTA Native 4K Generation Model!
+Generation across Diverse Aspect Ratios](https://w2genai-lab.github.io/UltraFlux/). A SOTA Native 4K Generation Model!
 - [2025-09] We release [LucidFlux-14B:Caption-Free Universal Image Restoration via a Large-Scale Diffusion Transformer](https://w2genai-lab.github.io/LucidFlux/). A SOTA Universal Image Restoration DiT Model!
 - [2025-08] Our [Style LoRA series](https://huggingface.co/Owen777/Kontext-Style-Loras) for the FLUX.1 Kontext model has surpassed 30K downloads and 100+ likes on Hugging Face！🎉🎉 [Demo and LoRAs](https://huggingface.co/Kontext-Style).
 - [2025-08] [MovieChat+](https://arxiv.org/pdf/2404.17176?) is accepted by IEEE TPAMI 2025.
