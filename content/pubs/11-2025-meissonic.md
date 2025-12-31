@@ -1,7 +1,7 @@
 ---
 title: "Meissonic: Revitalizing Masked Generative Transformers for Efficient High-Resolution Text-to-Image Synthesis"
-date: 2025-01-01
-venue: ICLR 2025
+date: 2024-01-01
+venue: ICLR 2024
 authors:
   - name: Jinbin Bai*
   - name: <strong>Tian Ye*</strong>
@@ -17,5 +17,4 @@ page: https://huggingface.co/MeissonFlow/Meissonic
 summary: The first SDXL-level high-resolution non-AR T2I model.
 selected: true
 ---
-
 
