@@ -1,0 +1,17 @@
+{{- define "main" }}
+
+{{- if .Content }}
+<div class="post-content">
+{{ .Content }}
+</div>
+{{- end }}
+
+{{- $pages := .Pages.ByDate.Reverse }}
+{{- $paginator := .Paginate $pages }}
+{{- range $paginator.Pages }}
+{{- .Render "summary" }}
+{{- end }}
+
+{{- partial "pagination.html" . }}
+
+{{- end }}
