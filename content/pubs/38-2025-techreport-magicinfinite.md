@@ -3,11 +3,11 @@ title: "MagicInfinite: Generating Infinite Talking Videos with Your Words and Vo
 date: 2025-04
 venue: Technical Report 2025
 authors:
-  - name: Hongwei Yi
-  - name: <strong>Tian Ye</strong>
-  - name: Shitong Shao
-  - name: Xuancheng Yang
-  - name: Jiantong Zhao
+  - name: Hongwei Yi*
+  - name: <strong>Tian Ye*</strong>
+  - name: Shitong Shao*
+  - name: Xuancheng Yang*
+  - name: Jiantong Zhao*
   - name: Hanzhong Guo
   - name: Terrance Wang
   - name: Qingyu Yin
