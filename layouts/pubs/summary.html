@@ -16,7 +16,11 @@
       {{- end -}}
     </div>
     {{- end }}
-    {{- with .Params.summary }}
+    {{- $summary := .Summary }}
+    {{- if not $summary }}
+      {{- $summary = .Params.summary }}
+    {{- end }}
+    {{- with $summary }}
     <p class="pub-summary">{{ . }}</p>
     {{- end }}
   </div>
