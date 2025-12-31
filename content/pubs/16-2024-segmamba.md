@@ -1,7 +1,7 @@
 ---
 title: "SegMamba: Long-range Sequential Modeling Mamba For 3D Medical Image Segmentation"
 date: 2024-06-01
-venue: MICCAI 2024 (Spotlight)
+venue: MICCAI 2024 Spotlight
 authors:
   - name: Zhaohu Xing
   - name: <strong>Tian Ye</strong>
