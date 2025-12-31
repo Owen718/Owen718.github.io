@@ -1,6 +1,6 @@
 ---
 title: "GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing"
-date: 2025-10-01
+date: 2025-05-01
 venue: ICCV 2025
 authors:
   - name: Sixiang Chen
