@@ -1,6 +1,6 @@
 ---
 title: "MagicInfinite: Generating Infinite Talking Videos with Your Words and Voice"
-date: 2025-04
+date: 2025-04-01
 venue: Technical Report 2025
 authors:
   - name: Hongwei Yi*
