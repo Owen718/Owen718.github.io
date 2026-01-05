@@ -5,14 +5,15 @@ layout: "home"
 
 ## 👋 About Me
 
-I am Tian Ye, a PhD student at [ROAS Thrust](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/)@HKUST, Guangzhou. I am fortunate to be supervised by [Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home) and [Prof. Kan, Ge Lin](https://repository.hkust.edu.hk/ir/AuthorProfile/kan-ge-lin). During my undergraduate studies, I had the honor of being supervised by and collaborating with **Prof. Erkang Chen** and **Prof. Yun Liu**. I am a core contributor or project leader of several large-scale generative models, including [MagicInfinite](https://magicinfinite.github.io), [Meissonic](https://arxiv.org/abs/2410.08261), [LucidFlux](https://w2genai-lab.github.io/LucidFlux/), [PosterCraft](https://ephemeral182.github.io/PosterCraft/) and [UltraFlux](https://w2genai-lab.github.io/UltraFlux/).
+I am a Ph.D. student at **HKUST(GZ)**, advised by **Prof. Lei Zhu** and **Prof. Kan, Ge Lin**. Previously, I worked as a Research Scientist Intern at **Hedra Inc.** My research is fueled by a core philosophy: **to deliver work that is either immediately deployable by the user community or foundational enough to inspire the field.**
 
-## 🔬 Research Interests
+Guided by this goal, I strive to bridge the gap between academic innovation and industrial application. I have developed several SOTA generative models:
 
-- **AIGC Technology**: Supporting the art creation industry and digital asset generation through advances in AIGC (Artificial Intelligence Generated Content) technology.
-- **Visual Quality**: Exploring visual challenges in photography to create images with superior quality.
+* **Industry Impact:** At Hedra, I co-developed the **MagicInfinite (Character-3)** model. This breakthrough in infinite talking video generation directly propelled the company to **$10M ARR** and secured **$32M in Series A funding**.
+* **Community Utility:** I released **Meissonic**, the world's first High-Res. Non-AR model achieving SDXL-level performance, which has garnered broad community adoption.
+* **Visual Frontiers:** I lead **UltraFlux** (pioneering Data-Model Co-Design for Native 4K generation) and **LucidFlux** (a universal restoration model that outperforms commercial tools like **Meitu SR**), pushing the limits of visual quality and fidelity.
 
-
+In recognition of previous contributions, I was selected as a **KAUST AI Rising Star 2025** (Top 25 globally), honoring my efforts to redefine the boundaries of visual generation and restoration.
 ## 📰 News
 - [2025-11] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
 Generation across Diverse Aspect Ratios](https://w2genai-lab.github.io/UltraFlux/). A SOTA Native 4K Generation Model!
@@ -33,12 +34,8 @@ Generation across Diverse Aspect Ratios](https://w2genai-lab.github.io/UltraFlux
  
  
 ## Mentoring
-
-<!-- - Heming Li, RA@HKUST(GZ), B.S.@CUHK -->
 - Song Fei, Mphil Student@HKUST(GZ)
-<!-- - Haoxuan Feng, Mphil Student@HKUST(GZ)
-- Chenghao Xue, Now MSc Student@UC Davis
-- Jingxia Jiang, Now PhD Student@NC State -->
+
 
 
 ## 🎖 Competitions & Awards 
