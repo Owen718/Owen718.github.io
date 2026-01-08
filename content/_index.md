@@ -5,13 +5,14 @@ layout: "home"
 
 ## 👋 About Me
 
-I am a Ph.D. student at **HKUST(GZ)**, advised by **Prof. Lei Zhu** and **Prof. Kan, Ge Lin**. Previously, I worked as a Research Scientist Intern at **Hedra Inc.** My research is fueled by a core philosophy: **to deliver work that is either immediately deployable by the user community or foundational enough to inspire the field.** Guided by this goal, I strive to bridge the gap between academic innovation and industrial application. 
+I am a Ph.D. student at **HKUST(GZ)**, advised by **Prof. Lei Zhu** and **Prof. Kan, Ge Lin**. Previously, I worked as a Research Scientist Intern at **Hedra Inc.** My research is fueled by a core philosophy: **to deliver work that is either immediately deployable by the user community or foundational enough to inspire the field.** Guided by this goal, I strive to bridge the gap between academic innovation and industrial application.
 
 ## 🔬 Research Experience
 - **Community Utility:** I released **Meissonic**, the world's first High-Res. Non-AR model achieving SDXL-level performance, which has garnered broad community adoption.
 - **Visual Frontiers:** I lead **UltraFlux** (pioneering Data-Model Co-Design for Native 4K generation) and **LucidFlux** (a universal restoration model that outperforms commercial tools like **Meitu SR**), pushing the limits of visual quality and fidelity.
+- **Beyond Synthesis:** I explore the versatile potential of generative models beyond standard synthesis. By harvesting *Diffusion Priors*, I have developed novel solutions for **restoration** (*DTPM*, CVPR 2024; *AGLLDiff*, AAAI 2025), **perception** (*GlassWizard*, ICCV 2025), and **creative design** (*Posta*, CVPR 2025, PosterCraft), validating the broad applicability of AIGC foundations.
 - **Industry Impact:** At Hedra, I co-developed the **MagicInfinite (Character-3)** model. This breakthrough in infinite talking video generation directly propelled the company to **$15M ARR** and secured **$32M in Series A funding**.
-
+- 
 ## 📰 News
 - [2025-11] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
 Generation across Diverse Aspect Ratios](https://w2genai-lab.github.io/UltraFlux/). A SOTA Native 4K Generation Model!
