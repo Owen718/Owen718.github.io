@@ -5,13 +5,18 @@ layout: "home"
 
 ## 👋 About Me
 
-I am a Ph.D. student at **HKUST(GZ)**, advised by **Prof. Lei Zhu** and **Prof. Kan, Ge Lin**. Previously, I worked as a Research Scientist Intern at **Hedra Inc.** My research is fueled by a core philosophy: **to deliver work that is either immediately deployable by the user community or foundational enough to inspire the field.** Guided by this goal, I strive to bridge the gap between academic innovation and industrial application.
+I’m a Ph.D. student at HKUST,Guangzhou, advised by Prof. Lei Zhu and Prof. Kan Ge Lin. I previously interned as a Research Scientist at Hedra Inc. I’m interested in building research that can be **shipped, reused, and built upon—connecting academic advances with practical systems**.
 
 ## 🔬 Research Experience
-- **Community Utility:** I released **Meissonic**, the first High-Res. Non-AR model achieving SDXL-level performance, which has garnered broad community adoption.
-- **Visual Frontiers:** I lead **UltraFlux** (pioneering Data-Model Co-Design for Native 4K generation) and **LucidFlux** (a universal restoration model that outperforms commercial tools like **Meitu SR**), pushing the limits of visual quality and fidelity.
-- **Beyond Synthesis:** I explore the versatile potential of generative models beyond standard synthesis. By harvesting *Diffusion Priors*, I have developed novel solutions for **restoration** (*DTPM*, CVPR 2024; *AGLLDiff*, AAAI 2025), **perception** (*GlassWizard*, ICCV 2025), and **creative design** (*Posta*, CVPR 2025, PosterCraft), validating the broad applicability of AIGC foundations.
-- **Industry Impact:** At Hedra, I co-developed the **MagicInfinite (Character-3)** model. This breakthrough in infinite talking video generation directly propelled the company to **$15M ARR** and secured **$32M funding**.
+- **Open-source & community impact.** I released Meissonic, a high-resolution non-autoregressive diffusion model that reaches SDXL-level quality and has been widely adopted by the community.
+
+- **Visual Frontiers.** I lead UltraFlux (data–model co-design for native 4K generation) and LucidFlux (universal image restoration), pushing the boundary of visual quality; LucidFlux surpasses strong commercial baselines such as Meitu SR.
+
+- **Beyond synthesis: exploring diffusion priors.** I leverage diffusion priors to build methods that generalize across tasks, including restoration (DTPM, CVPR 2024; AGLLDiff, AAAI 2025), perception (GlassWizard, ICCV 2025), and creative design (Posta, CVPR 2025; PosterCraft).
+
+- **Industry translation.** At Hedra, I co-developed MagicInfinite (Character-3) for infinite talking-video generation, contributing to product traction and company growth ($15M ARR, $32M funding).
+
+
   
 ## 📰 News
 - [2025-11] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
