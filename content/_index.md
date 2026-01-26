@@ -19,7 +19,7 @@ I’m a Ph.D. student at HKUST,Guangzhou, advised by Prof. Lei Zhu and Prof. Kan
 
   
 ## 📰 News
---[2026-01] LucidFlux&PosterCraft are accepted by ICLR 2026.
+- [2026-01] LucidFlux&PosterCraft are accepted by ICLR 2026.
 - [2025-11] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
 Generation across Diverse Aspect Ratios](https://w2genai-lab.github.io/UltraFlux/). A SOTA Native 4K Generation Model!
 - [2025-09] We release [LucidFlux-14B:Caption-Free Universal Image Restoration via a Large-Scale Diffusion Transformer](https://w2genai-lab.github.io/LucidFlux/). A SOTA Universal Image Restoration DiT Model!
