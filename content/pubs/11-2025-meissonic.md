@@ -1,7 +1,7 @@
 ---
 title: "Meissonic: Revitalizing Masked Generative Transformers for Efficient High-Resolution Text-to-Image Synthesis"
 date: 2024-01-01
-venue: ICLR 2024
+venue: ICLR 2025
 authors:
   - name: Jinbin Bai*
   - name: <strong>Tian Ye*</strong>
