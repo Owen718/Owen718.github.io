@@ -10,15 +10,16 @@ I’m a Ph.D. student at HKUST,Guangzhou, advised by Prof. Lei Zhu and Prof. Kan
 ## 🔬 Research Experience
 - **Open-source & community impact.** I released Meissonic, a high-resolution non-autoregressive diffusion model that reaches SDXL-level quality and has been widely adopted by the community.
 
-- **Visual Frontiers.** I lead UltraFlux (data–model co-design for native 4K generation) and LucidFlux (universal image restoration), pushing the boundary of visual quality; LucidFlux surpasses strong commercial baselines such as Meitu SR.
+- **Visual Frontiers.** I lead UltraFlux and LucidFlux (ICLR'26), pushing the boundary of visual quality; LucidFlux surpasses strong commercial baselines such as Meitu SR.
 
-- **Beyond synthesis: exploring diffusion priors.** I leverage diffusion priors to build methods that generalize across tasks, including restoration (DTPM, CVPR 2024; AGLLDiff, AAAI 2025), perception (GlassWizard, ICCV 2025), and creative design (Posta, CVPR 2025; PosterCraft).
+- **Beyond synthesis: exploring diffusion priors.** I leverage diffusion priors to build methods that generalize across tasks, including restoration (DTPM, CVPR 2024; AGLLDiff, AAAI 2025), perception (GlassWizard, ICCV 2025), and creative design (Posta, CVPR 2025; PosterCraft, ICLR 2026).
 
 - **Industry translation.** At Hedra, I co-developed MagicInfinite (Character-3) for infinite talking-video generation, contributing to product traction and company growth ($15M ARR, $32M funding).
 
 
   
 ## 📰 News
+--[2026-01] LucidFlux&PosterCraft are accepted by ICLR 2026.
 - [2025-11] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
 Generation across Diverse Aspect Ratios](https://w2genai-lab.github.io/UltraFlux/). A SOTA Native 4K Generation Model!
 - [2025-09] We release [LucidFlux-14B:Caption-Free Universal Image Restoration via a Large-Scale Diffusion Transformer](https://w2genai-lab.github.io/LucidFlux/). A SOTA Universal Image Restoration DiT Model!
