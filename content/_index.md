@@ -30,7 +30,6 @@ Generation across Diverse Aspect Ratios](https://w2genai-lab.github.io/UltraFlux
 - [2025-06] We are pleased to announce the release of [PosterCraft](https://ephemeral182.github.io/PosterCraft/)! A Unified Framework for High-Quality Aesthetic Poster Generation.
 - [2025-03] We are pleased to announce the release of [MagicInfinite](https://magicinfinite.github.io) (Character-3 Model of Hedra Inc.). Now you can fastly generate infinite talking videos with your words and voice!
 - [2025-02] 3 Papers are accepted by CVPR 2025.
-- [2025-02] We are pleased to announce the release [Magic 1-For-1](https://magic-141.github.io/Magic-141/), a SOTA, *4-step image-to-video diffusion model*, along with our technical report.
 - [2025-01] I am honored to be selected as a speaker at [KAUST Rising Stars in AI Symposium 2025](https://www.kaust.edu.sa/en/news/rising-stars-in-ai-symposium-2025)!! Thank you KAUST for the opportunity!
 - [2024-11] I am honored to be selected as a Outstanding Reviewer for BMVC 2024！
 - [2024-11] We release Meissonic on HuggingFace🎉, Meissonic-1B is the first SDXL level, high-resolution non-AR T2I model!!
