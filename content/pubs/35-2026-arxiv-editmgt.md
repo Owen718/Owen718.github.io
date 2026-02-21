@@ -1,7 +1,7 @@
 ---
 title: "EditMGT: Unleashing Potentials of Masked Generative Transformers in Image Editing"
 date: 2025-12-12
-venue: arXiv 2025
+venue: CVPR 2026
 authors:
   - name: Wei Chow
   - name: Linfeng Li

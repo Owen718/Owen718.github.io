@@ -1,4 +1,16 @@
 {{- with site.Params.homeInfoParams }}
+{{- $randomProfileImages := slice -}}
+{{- $randomProfileDir := "static/profile" -}}
+{{- if fileExists $randomProfileDir -}}
+    {{- range (readDir $randomProfileDir) -}}
+        {{- if not .IsDir -}}
+            {{- $filename := lower .Name -}}
+            {{- if or (hasSuffix $filename ".jpg") (hasSuffix $filename ".jpeg") (hasSuffix $filename ".png") (hasSuffix $filename ".webp") (hasSuffix $filename ".gif") -}}
+                {{- $randomProfileImages = $randomProfileImages | append ((printf "/profile/%s" .Name) | relURL) -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
 <article class="first-entry home-info">
     <header class="entry-header">
         <div class="home-header-grid">
@@ -12,7 +24,20 @@
                 </footer>
             </div>
             <div class="profile-img">
-                {{- if .imageUrl -}}
+                {{- if gt (len $randomProfileImages) 0 -}}
+                <img id="home-random-profile-img" draggable="false" src="{{ index $randomProfileImages 0 }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                    height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+                <script>
+                    (() => {
+                        const profileImages = {{ $randomProfileImages | jsonify | safeJS }};
+                        if (!Array.isArray(profileImages) || profileImages.length === 0) return;
+                        const profileImg = document.getElementById("home-random-profile-img");
+                        if (!profileImg) return;
+                        const randomIndex = Math.floor(Math.random() * profileImages.length);
+                        profileImg.src = profileImages[randomIndex];
+                    })();
+                </script>
+                {{- else if .imageUrl -}}
                 {{- $img := "" }}
                 {{- if not (urls.Parse .imageUrl).IsAbs }}
                     {{- $img = resources.Get .imageUrl }}
@@ -46,5 +71,3 @@
     </header>
 </article>
 {{- end -}}
-
-
