@@ -19,8 +19,10 @@ I’m a Ph.D. student at HKUST,Guangzhou, advised by Prof. Lei Zhu and Prof. Kan
 
   
 ## 📰 News
-- [2026-02] UltraFlux&PosterOmni&EditMGT are accepted by CVPR 2026.
-- [2026-01] LucidFlux&PosterCraft are accepted by ICLR 2026.
+- [2026-03] We release [LucidNFT](https://w2genai-lab.github.io/LucidNFT), the first consistency-driven RL paradigm for generative Real-SR.
+- [2026-03] Our paper "Improved and Accelerated Text-to-Image Generation with Collect, Reflect, and Refine" is accepted by IEEE TPAMI.
+- [2026-02] [UltraFlux](https://w2genai-lab.github.io/UltraFlux/)&[PosterOmni](https://ephemeral182.github.io/PosterOmni/)&[EditMGT](https://weichow23.github.io/EditMGT/) are accepted by CVPR 2026.
+- [2026-01] [LucidFlux](https://w2genai-lab.github.io/LucidFlux/)&[PosterCraft](https://ephemeral182.github.io/PosterCraft/) are accepted by ICLR 2026.
 - [2025-11] We release [UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image
 Generation across Diverse Aspect Ratios](https://w2genai-lab.github.io/UltraFlux/). A SOTA Native 4K Generation Model!
 - [2025-09] We release [LucidFlux-14B:Caption-Free Universal Image Restoration via a Large-Scale Diffusion Transformer](https://w2genai-lab.github.io/LucidFlux/). A SOTA Universal Image Restoration DiT Model!
