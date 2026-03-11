@@ -451,12 +451,92 @@ a:hover {
   align-content: start;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .about-portrait {
   width: 100%;
   max-width: 360px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border: 1px solid var(--editorial-line);
+}
+
+.conference-stage-shell {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+
+.conference-stage {
+  position: relative;
+  width: 100%;
+  min-height: 188px;
+  overflow: hidden;
+}
+
+.conference-stage-fallback {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.conference-stage-live .conference-stage-fallback {
+  display: none;
+}
+
+.conference-cube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04) 34%),
+    linear-gradient(160deg, var(--cube-color, #171717), var(--cube-edge, #111827));
+  box-shadow:
+    0 14px 26px var(--cube-shadow, rgba(15, 23, 42, 0.14)),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  transition: filter 160ms ease, box-shadow 160ms ease;
+}
+
+.conference-cube-static {
+  position: static;
+  box-shadow: none;
+  cursor: default;
+}
+
+.conference-cube:hover {
+  filter: saturate(1.08) brightness(1.06);
+  box-shadow:
+    0 16px 30px var(--cube-shadow, rgba(15, 23, 42, 0.18)),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
 .about-links {
@@ -685,6 +765,7 @@ a:hover {
   .js-ready .reveal-on-scroll,
   .js-ready .reveal-item,
   .js-ready .reveal-image,
+  .conference-cube,
   .home-cta {
     opacity: 1 !important;
     transform: none !important;
@@ -720,6 +801,15 @@ a:hover {
   .home-section-alt {
     margin: 0 -12px;
     padding: 48px 12px;
+  }
+
+  .conference-stage,
+  .conference-stage-shell {
+    max-width: none;
+  }
+
+  .conference-stage {
+    min-height: 172px;
   }
 
   .news-timeline {

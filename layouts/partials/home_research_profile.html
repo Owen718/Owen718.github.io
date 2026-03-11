@@ -14,6 +14,17 @@
         </article>
         <aside class="about-panel">
             <img class="about-portrait reveal-image" src="{{ "/profile/2026-02-21_154947_709.jpg" | relURL }}" alt="Tian (Owen) YE portrait" />
+            <div class="conference-stage-shell reveal-on-scroll" data-conference-stage>
+                <p class="sr-only">Interactive conference badge animation. Five conference cubes labeled CVPR, ICLR, ICCV, ECCV, and NIPS fall into a small stage and can be clicked to jump.</p>
+                <div class="conference-stage-fallback" aria-hidden="true">
+                    <span class="conference-cube conference-cube-static">CVPR</span>
+                    <span class="conference-cube conference-cube-static">ICLR</span>
+                    <span class="conference-cube conference-cube-static">ICCV</span>
+                    <span class="conference-cube conference-cube-static">ECCV</span>
+                    <span class="conference-cube conference-cube-static">NIPS</span>
+                </div>
+                <div class="conference-stage" role="group" aria-label="Interactive conference badge animation. Click a badge to bounce it."></div>
+            </div>
             <nav class="about-links reveal-stagger" aria-label="Profile links">
                 <span class="about-links-label reveal-item">Links</span>
                 <a class="reveal-item" href="https://scholar.google.com/citations?user=1sGXZ-wAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>

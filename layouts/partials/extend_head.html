@@ -1,5 +1,6 @@
 {{- if .IsHome }}
 <script>document.documentElement.classList.add("is-homepage");</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js" defer></script>
 {{- end }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,3 +26,167 @@ document.addEventListener("DOMContentLoaded", function () {
   } catch (error) {}
 });
 </script>
+{{- if .IsHome }}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var stageShell = document.querySelector("[data-conference-stage]");
+  if (!stageShell || !window.Matter) {
+    return;
+  }
+
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  var labels = ["CVPR", "ICLR", "ICCV", "ECCV", "NIPS"];
+  var palette = [
+    { color: "#2563EB", edge: "#1D4ED8", glow: "rgba(37, 99, 235, 0.22)" },
+    { color: "#DC2626", edge: "#B91C1C", glow: "rgba(220, 38, 38, 0.2)" },
+    { color: "#7C3AED", edge: "#6D28D9", glow: "rgba(124, 58, 237, 0.22)" },
+    { color: "#059669", edge: "#047857", glow: "rgba(5, 150, 105, 0.22)" },
+    { color: "#EA580C", edge: "#C2410C", glow: "rgba(234, 88, 12, 0.22)" },
+    { color: "#DB2777", edge: "#BE185D", glow: "rgba(219, 39, 119, 0.2)" },
+    { color: "#0891B2", edge: "#0E7490", glow: "rgba(8, 145, 178, 0.22)" },
+    { color: "#CA8A04", edge: "#A16207", glow: "rgba(202, 138, 4, 0.24)" }
+  ];
+  var cubePalette = palette
+    .slice()
+    .sort(function () { return Math.random() - 0.5; })
+    .slice(0, labels.length);
+
+  function applyCubePalette(node, index) {
+    var style = cubePalette[index % cubePalette.length];
+    node.style.setProperty("--cube-color", style.color);
+    node.style.setProperty("--cube-edge", style.edge);
+    node.style.setProperty("--cube-shadow", style.glow);
+  }
+
+  stageShell.querySelectorAll(".conference-cube-static").forEach(function (node, index) {
+    applyCubePalette(node, index);
+  });
+
+  function initializeConferenceStage() {
+    if (stageShell.dataset.physicsReady === "true") {
+      return;
+    }
+    stageShell.dataset.physicsReady = "true";
+    stageShell.classList.add("conference-stage-live");
+
+    var stage = stageShell.querySelector(".conference-stage");
+    var rect = stage.getBoundingClientRect();
+    var width = Math.max(Math.round(rect.width), 240);
+    var height = Math.max(Math.round(rect.height), 172);
+    var size = Math.max(50, Math.min(56, Math.floor(width / 5.8)));
+    var wallThickness = 48;
+
+    var Engine = Matter.Engine;
+    var World = Matter.World;
+    var Bodies = Matter.Bodies;
+    var Body = Matter.Body;
+
+    var engine = Engine.create();
+    engine.gravity.y = 1;
+
+    var world = engine.world;
+    var bodiesById = {};
+    var spawnTimers = [];
+
+    World.add(world, [
+      Bodies.rectangle(width / 2, height + wallThickness / 2, width + wallThickness * 2, wallThickness, { isStatic: true }),
+      Bodies.rectangle(-wallThickness / 2, height / 2, wallThickness, height * 2, { isStatic: true }),
+      Bodies.rectangle(width + wallThickness / 2, height / 2, wallThickness, height * 2, { isStatic: true })
+    ]);
+
+    function syncElement(body) {
+      var node = body.plugin.element;
+      if (!node) {
+        return;
+      }
+      node.style.transform =
+        "translate(" + (body.position.x - size / 2).toFixed(1) + "px, " + (body.position.y - size / 2).toFixed(1) + "px) rotate(" + body.angle.toFixed(4) + "rad)";
+    }
+
+    function makeCube(label, index) {
+      var x = width * (0.2 + index * 0.15) + (Math.random() - 0.5) * 20;
+      var body = Bodies.rectangle(x, -80 - index * 18, size, size, {
+        restitution: 0.6,
+        friction: 0.62,
+        frictionStatic: 0.92,
+        frictionAir: 0.025,
+        density: 0.0022
+      });
+      var node = document.createElement("button");
+      node.type = "button";
+      node.className = "conference-cube";
+      node.textContent = label;
+      node.setAttribute("aria-label", label + " badge");
+      node.dataset.bodyId = String(body.id);
+      applyCubePalette(node, index);
+
+      body.plugin.element = node;
+      bodiesById[body.id] = body;
+      stage.appendChild(node);
+      World.add(world, body);
+      syncElement(body);
+    }
+
+    labels.forEach(function (label, index) {
+      spawnTimers.push(window.setTimeout(function () {
+        makeCube(label, index);
+      }, index * 220));
+    });
+
+    stage.addEventListener("click", function (event) {
+      var cube = event.target.closest(".conference-cube");
+      if (!cube) {
+        return;
+      }
+      var body = bodiesById[cube.dataset.bodyId];
+      if (!body) {
+        return;
+      }
+      Body.setVelocity(body, {
+        x: body.velocity.x * 0.35 + (Math.random() - 0.5) * 3.4,
+        y: Math.min(body.velocity.y, -9.5)
+      });
+      Body.applyForce(body, body.position, { x: (Math.random() - 0.5) * 0.003, y: -0.026 });
+    });
+
+    var lastTime = 0;
+    function tick(timestamp) {
+      if (!stage.isConnected) {
+        spawnTimers.forEach(window.clearTimeout);
+        return;
+      }
+      if (!lastTime) {
+        lastTime = timestamp;
+      }
+      var delta = Math.min(timestamp - lastTime, 20) || 16.666;
+      lastTime = timestamp;
+
+      Engine.update(engine, delta);
+      Object.keys(bodiesById).forEach(function (id) {
+        syncElement(bodiesById[id]);
+      });
+      window.requestAnimationFrame(tick);
+    }
+
+    window.requestAnimationFrame(tick);
+  }
+
+  try {
+    var kickoffObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          initializeConferenceStage();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.28, rootMargin: "0px 0px -10% 0px" });
+    kickoffObserver.observe(stageShell);
+  } catch (error) {
+    initializeConferenceStage();
+  }
+});
+</script>
+{{- end }}
