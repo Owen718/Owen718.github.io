@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  var labels = ["CVPR", "ICLR", "ICCV", "ECCV", "NIPS"];
+  var labels = ["CVPR", "ICLR", "ICCV", "ECCV", "NIPS", "ICML", "AAAI"];
   var palette = [
     { color: "#2563EB", edge: "#1D4ED8", glow: "rgba(37, 99, 235, 0.22)" },
     { color: "#DC2626", edge: "#B91C1C", glow: "rgba(220, 38, 38, 0.2)" },
@@ -120,7 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function makeCube(label, index) {
-      var x = width * (0.2 + index * 0.15) + (Math.random() - 0.5) * 20;
+      var spread = labels.length > 1 ? 0.64 / (labels.length - 1) : 0;
+      var x = width * (0.18 + index * spread) + (Math.random() - 0.5) * 20;
       var body = Bodies.rectangle(x, -80 - index * 18, size, size, {
         restitution: 0.6,
         friction: 0.62,
