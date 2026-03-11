@@ -1,73 +1,28 @@
 {{- with site.Params.homeInfoParams }}
-{{- $randomProfileImages := slice -}}
-{{- $randomProfileDir := "static/profile" -}}
-{{- if fileExists $randomProfileDir -}}
-    {{- range (readDir $randomProfileDir) -}}
-        {{- if not .IsDir -}}
-            {{- $filename := lower .Name -}}
-            {{- if or (hasSuffix $filename ".jpg") (hasSuffix $filename ".jpeg") (hasSuffix $filename ".png") (hasSuffix $filename ".webp") (hasSuffix $filename ".gif") -}}
-                {{- $randomProfileImages = $randomProfileImages | append ((printf "/profile/%s" .Name) | relURL) -}}
-            {{- end -}}
-        {{- end -}}
-    {{- end -}}
-{{- end -}}
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <div class="home-header-grid">
-            <div class="home-header-left">
-                <h1>{{ .Title | markdownify }}</h1>
-                {{- if .Content }}
-                <div class="home-subtitle">{{ .Content | markdownify }}</div>
-                {{- end }}
-                <footer class="entry-footer">
-                    {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
-                </footer>
+<section class="home-hero reveal-on-scroll">
+    <div class="home-hero-panel">
+        <p class="home-kicker">Generative Vision Research</p>
+        <h1 class="home-title">{{ .Title | markdownify }}</h1>
+        <p class="home-role">PhD Student at HKUST,Guangzhou</p>
+        <p class="home-manifesto">Pushing the frontiers of Generative Vision. My work bridges state-of-the-art foundation models and scalable architectures to enable boundless human-AI co-creation.</p>
+        <div class="home-cta-row">
+            <a class="home-cta home-cta-primary" href="{{ "/pubs/" | relURL }}">Publications</a>
+            <a class="home-cta home-cta-secondary" href="#news-highlights">News & Highlights</a>
+        </div>
+        <div class="home-meta-grid reveal-stagger" aria-label="Research areas and focus">
+            <div class="home-meta-item reveal-item">
+                <span class="home-meta-label">Research</span>
+                <strong>AIGC</strong>
             </div>
-            <div class="profile-img">
-                {{- if gt (len $randomProfileImages) 0 -}}
-                <img id="home-random-profile-img" draggable="false" src="{{ index $randomProfileImages 0 }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                    height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-                <script>
-                    (() => {
-                        const profileImages = {{ $randomProfileImages | jsonify | safeJS }};
-                        if (!Array.isArray(profileImages) || profileImages.length === 0) return;
-                        const profileImg = document.getElementById("home-random-profile-img");
-                        if (!profileImg) return;
-                        const randomIndex = Math.floor(Math.random() * profileImages.length);
-                        profileImg.src = profileImages[randomIndex];
-                    })();
-                </script>
-                {{- else if .imageUrl -}}
-                {{- $img := "" }}
-                {{- if not (urls.Parse .imageUrl).IsAbs }}
-                    {{- $img = resources.Get .imageUrl }}
-                {{- end }}
-                {{- if $img }}
-                    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-                    {{- if hugo.IsExtended -}}
-                        {{- $processableFormats = $processableFormats | append "webp" -}}
-                    {{- end -}}
-                    {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-                    {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                        {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
-                            {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
-                        {{- else if .imageHeight }}
-                            {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
-                        {{ else if .imageWidth }}
-                            {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
-                        {{ else }}
-                            {{- $img = $img.Resize "150x150" }}
-                        {{- end }}
-                    {{- end }}
-                    <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                        height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-                {{- else }}
-                <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                    height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-                {{- end }}
-                {{- end }}
+            <div class="home-meta-item reveal-item">
+                <span class="home-meta-label">Core Models</span>
+                <strong>Diffusion Models</strong>
+            </div>
+            <div class="home-meta-item reveal-item">
+                <span class="home-meta-label">Long-term Bet</span>
+                <strong>Boundless Human-AI Co-Creation</strong>
             </div>
         </div>
-    </header>
-</article>
+    </div>
+</section>
 {{- end -}}

@@ -11,21 +11,12 @@
     {{- end }}
   </header>
 
-  {{- if .Content }}
-  <div class="post-content pubs-intro">
-    {{ .Content }}
-  </div>
-  {{- end }}
-
-  {{- $pages := .Pages.ByDate.Reverse }}
-  {{- $paginator := .Paginate $pages }}
+  {{- $pubs := union .RegularPages .Sections }}
   <div class="pubs-list">
-    {{- range $paginator.Pages }}
-    {{- .Render "summary" }}
+    {{- range $pubs }}
+    {{- partial "pubs/summary.html" . }}
     {{- end }}
   </div>
-
-  {{- partial "pagination.html" . }}
 </section>
 
 {{- end }}

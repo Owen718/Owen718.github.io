@@ -18,12 +18,12 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Tian YE
-  description: "Computer Vision Researcher"
+  description: "AIGC, Diffusion Models, and Foundation Models researcher at HKUST(GZ)"
   keywords: ["computer vision", "deep learning", "researcher"]
   author: Tian YE
   # images: ["imgs/profile.jpg"]
-  defaultTheme: dark
-  disableThemeToggle: false
+  defaultTheme: light
+  disableThemeToggle: true
 
   ShowOnlySelectedPubs: true
   ShowReadingTime: true
@@ -50,6 +50,8 @@ params:
     favicon32x32: "/hkust_logo_blue.jpg"
     apple_touch_icon: "/hkust_logo_blue.jpg"
     safari_pinned_tab: "/safari-pinned-tab.svg"
+    theme_color: "#FFFFFF"
+    msapplication_TileColor: "#FFFFFF"
 
   label:
     text:
@@ -72,7 +74,7 @@ params:
   
   socialIcons:
     - name: email
-      url: "tye610@connect.hkust-gz.edu.cn"
+      url: "mailto:tye610@connect.hkust-gz.edu.cn"
     - name: github
       url: "https://github.com/Owen718"
     - name: googlescholar

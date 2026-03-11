@@ -3,19 +3,19 @@
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
 {{- else }}
-
-{{- if site.Params.homeInfoParams }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
-{{- if .Content }}
-<div class="post-content">
-{{ .Content }}
+<div class="home-shell">
+    <div class="home-main">
+        {{- if site.Params.homeInfoParams }}
+        {{- partial "home_info.html" . }}
+        {{- end }}
+        {{- partial "home_research_profile.html" . }}
+        {{- partial "home_research_highlights.html" . }}
+        {{- partial "home_news_timeline.html" . }}
+        {{- partial "home_selected_works.html" . }}
+        {{- partial "home_academic_profile.html" . }}
+    </div>
 </div>
-{{- end }}
 
 {{- end }}
 
 {{- end }}
-
-

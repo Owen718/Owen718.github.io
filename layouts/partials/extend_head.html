@@ -1,15 +1,27 @@
+{{- if .IsHome }}
+<script>document.documentElement.classList.add("is-homepage");</script>
+{{- end }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script>
-// Random background from /static/imgs/backgrounds
-(function(){
+document.addEventListener("DOMContentLoaded", function () {
   try {
-    var list = [
-      '/imgs/backgrounds/pexels-david-pinheiro-1877451-5793517.jpg',
-      '/imgs/backgrounds/pexels-john-callery-3749962-5707111.jpg',
-    ];
-    // If you add more images, just extend the list above with their paths
-    var pick = list[Math.floor(Math.random() * list.length)];
-    document.documentElement.style.setProperty('--site-bg-image', 'url(' + pick + ')');
-  } catch (e) {}
-})();
+    document.documentElement.classList.add("js-ready");
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".reveal-on-scroll, .reveal-item, .reveal-image").forEach(function (node) {
+      observer.observe(node);
+    });
+  } catch (error) {}
+});
 </script>
-
