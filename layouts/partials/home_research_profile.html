@@ -1,3 +1,9 @@
+{{- $profileImages := slice
+    ("/profile/2026-02-21_154929_092.jpg" | relURL)
+    ("/profile/2026-02-21_154947_709.jpg" | relURL)
+    ("/profile/2026-02-21_154957_774.jpg" | relURL)
+    ("/profile/snow_personal.png" | relURL)
+-}}
 <section id="about" class="home-section home-section-alt reveal-on-scroll">
     <div class="section-heading">
         <div>
@@ -13,7 +19,13 @@
             <p>I also architected Meissonic, the first open-source non-autoregressive model to achieve SDXL-level performance, and co-architected MagicInfinite at Hedra, where it supported a product with strong commercial traction. My work has received international recognition, including selection as a KAUST Rising Star in AI (2025).</p>
         </article>
         <aside class="about-panel">
-            <img class="about-portrait reveal-image" src="{{ "/profile/2026-02-21_154947_709.jpg" | relURL }}" alt="Tian (Owen) YE portrait" />
+            <img
+                class="about-portrait reveal-image"
+                src="{{ "/profile/2026-02-21_154947_709.jpg" | relURL }}"
+                data-random-profile
+                data-profile-images='{{ $profileImages | jsonify }}'
+                alt="Tian (Owen) YE portrait"
+            />
             <div class="conference-stage-shell reveal-on-scroll" data-conference-stage>
                 <p class="sr-only">Interactive conference badge animation. Five conference cubes labeled CVPR, ICLR, ICCV, ECCV, and NIPS fall into a small stage and can be clicked to jump.</p>
                 <div class="conference-stage-fallback" aria-hidden="true">

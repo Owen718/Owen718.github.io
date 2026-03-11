@@ -29,6 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
 {{- if .IsHome }}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  var profilePhoto = document.querySelector("[data-random-profile]");
+  if (profilePhoto) {
+    try {
+      var profileImages = JSON.parse(profilePhoto.dataset.profileImages || "[]");
+      if (profileImages.length > 0) {
+        var nextPhoto = profileImages[Math.floor(Math.random() * profileImages.length)];
+        if (nextPhoto && profilePhoto.getAttribute("src") !== nextPhoto) {
+          profilePhoto.setAttribute("src", nextPhoto);
+        }
+      }
+    } catch (error) {}
+  }
+
   var stageShell = document.querySelector("[data-conference-stage]");
   if (!stageShell || !window.Matter) {
     return;
