@@ -4,7 +4,7 @@ date: 2026-03-20T23:08:56+08:00
 draft: false
 math: true
 summary: "A systems-and-training breakdown of how a FLUX2-based editor was pushed toward realtime interaction using cache-aware two-step inference, causal attention distillation, and reward-guided DMDR."
-description: "A preview of a FLUX2 realtime editing stack covering inference acceleration, causal editing distillation, and reinforcement-learning-based DMDR."
+description: "A preview of a FLUX2 realtime editing stack covering inference acceleration, causal editing distillation, and DMDR with Editing Reward."
 showtoc: true
 tocopen: true
 cover:
