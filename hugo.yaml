@@ -106,6 +106,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - name: Blogs
+      url: /blogs/
+      weight: 5
     - name: Publications
       url: pubs
       weight: 10
