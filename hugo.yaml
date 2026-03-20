@@ -17,6 +17,7 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  math: true # Enable KaTeX math rendering
   title: Tian YE
   description: "AIGC, Diffusion Models, and Foundation Models researcher at HKUST(GZ)"
   keywords: ["computer vision", "deep learning", "researcher"]

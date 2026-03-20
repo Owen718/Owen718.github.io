@@ -178,9 +178,7 @@ A pair-wise EditReward model (Qwen3.5-9B backbone) is trained on high-quality ed
 
 Pair-wise structure is sharper than absolute scoring for editing. More importantly, the reward is wired as a direct differentiable loss:
 
-```
-total_gen_loss = loss_gen_dmd + reward_loss
-```
+$$\text{total\_gen\_loss} = \text{loss\_gen\_dmd} + \text{reward\_loss}$$
 
 The gradient flows through the generated image into the generator. The reward model does not just score samples—it acts as a semantic teacher through the image manifold.
 
