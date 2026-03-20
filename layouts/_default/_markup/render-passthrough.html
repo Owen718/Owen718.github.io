@@ -1,0 +1,11 @@
+{{- $opts := dict "output" "mathml" -}}
+{{- if eq .Type "block" -}}
+  {{- $opts = merge $opts (dict "displayMode" true) -}}
+{{- end -}}
+{{- with try (transform.ToMath .Inner $opts) -}}
+  {{- with .Err -}}
+    {{- errorf "Unable to render mathematical markup using transform.ToMath: %s: see %s" . $.Position -}}
+  {{- else -}}
+    {{- .Value -}}
+  {{- end -}}
+{{- end -}}
