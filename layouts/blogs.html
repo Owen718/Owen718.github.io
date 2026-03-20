@@ -1,0 +1,55 @@
+{{- define "main" }}
+
+<section class="section-shell">
+  <header class="page-header page-header-editorial">
+    <p class="section-kicker">Blogs</p>
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+  </header>
+
+  {{- if .Content }}
+  <div class="post-content pubs-intro">
+    {{ .Content }}
+  </div>
+  {{- end }}
+
+  {{- $pages := .Pages.ByDate.Reverse }}
+  {{- if gt (len $pages) 0 }}
+  {{- $paginator := .Paginate $pages }}
+  <div class="section-list">
+    {{- range $paginator.Pages }}
+    <article class="post-entry section-entry">
+      <header class="entry-header">
+        <h2 class="entry-hint-parent">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+      </header>
+      {{- if not (.Param "hideSummary") }}
+      <div class="entry-content">
+        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+      </div>
+      {{- end }}
+      {{- if not (.Param "hideMeta") }}
+      <footer class="entry-footer">
+        {{- partial "post_meta.html" . -}}
+      </footer>
+      {{- end }}
+      <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+    </article>
+    {{- end }}
+  </div>
+
+  {{- partial "pagination.html" . }}
+  {{- else }}
+  <div class="section-empty-state" role="status" aria-live="polite">
+    <p>No blog posts are published yet.</p>
+    <p>Long-form notes and technical writeups will appear here.</p>
+  </div>
+  {{- end }}
+</section>
+
+{{- end }}
