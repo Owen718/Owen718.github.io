@@ -110,6 +110,9 @@ menu:
     - name: Blogs
       url: /blogs/
       weight: 5
+    - name: Resume
+      url: /resources/_gen/assets/Resume_CV_TianYE_2026.pdf
+      weight: 6
     - name: Publications
       url: pubs
       weight: 10
