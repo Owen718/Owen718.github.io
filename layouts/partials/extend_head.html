@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function makeCube(label, index) {
       var spread = labels.length > 1 ? 0.64 / (labels.length - 1) : 0;
       var x = width * (0.18 + index * spread) + (Math.random() - 0.5) * 20;
-      var body = Bodies.rectangle(x, -80 - index * 18, size, size, {
+      var body = Bodies.rectangle(x, -54 - index * 12, size, size, {
         restitution: 0.6,
         friction: 0.62,
         frictionStatic: 0.92,

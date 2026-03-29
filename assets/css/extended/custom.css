@@ -451,6 +451,14 @@ a:hover {
   align-content: start;
 }
 
+.about-portrait-stack {
+  --conference-stage-depth: 188px;
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  padding-bottom: var(--conference-stage-depth);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -464,28 +472,33 @@ a:hover {
 }
 
 .about-portrait {
+  display: block;
   width: 100%;
-  max-width: 360px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border: 1px solid var(--editorial-line);
+  position: relative;
+  z-index: 10;
 }
 
 .conference-stage-shell {
-  position: relative;
-  width: 100%;
-  max-width: 360px;
-  margin-top: -14px;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
 }
 
 .conference-stage {
-  position: relative;
-  width: 100%;
-  min-height: 188px;
-  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  overflow: visible;
 }
 
 .conference-stage-fallback {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -525,6 +538,8 @@ a:hover {
   touch-action: manipulation;
   will-change: transform;
   transition: filter 160ms ease, box-shadow 160ms ease;
+  pointer-events: auto;
+  z-index: 30;
 }
 
 .conference-cube-static {

@@ -20,25 +20,27 @@
             <p>I also architected Meissonic, the first open-source non-autoregressive model to achieve SDXL-level performance, and co-architected MagicInfinite at Hedra, where it supported a product with strong commercial traction. My work has received international recognition, including selection as a KAUST Rising Star in AI (2025).</p>
         </article>
         <aside class="about-panel">
-            <img
-                class="about-portrait reveal-image"
-                src="{{ "/profile/2026-02-21_154947_709.jpg" | relURL }}"
-                data-random-profile
-                data-profile-images='{{ $profileImages | jsonify }}'
-                alt="Tian (Owen) YE portrait"
-            />
-            <div class="conference-stage-shell reveal-on-scroll" data-conference-stage>
-                <p class="sr-only">Interactive conference badge animation. Seven conference cubes labeled CVPR, ICLR, ICCV, ECCV, NeurIPS, ICML, and AAAI fall into a small stage and can be clicked to jump.</p>
-                <div class="conference-stage-fallback" aria-hidden="true">
-                    <span class="conference-cube conference-cube-static">CVPR</span>
-                    <span class="conference-cube conference-cube-static">ICLR</span>
-                    <span class="conference-cube conference-cube-static">ICCV</span>
-                    <span class="conference-cube conference-cube-static">ECCV</span>
-                    <span class="conference-cube conference-cube-static">NIPS</span>
-                    <span class="conference-cube conference-cube-static">ICML</span>
-                    <span class="conference-cube conference-cube-static">AAAI</span>
+            <div class="about-portrait-stack">
+                <img
+                    class="about-portrait reveal-image"
+                    src="{{ "/profile/2026-02-21_154947_709.jpg" | relURL }}"
+                    data-random-profile
+                    data-profile-images='{{ $profileImages | jsonify }}'
+                    alt="Tian (Owen) YE portrait"
+                />
+                <div class="conference-stage-shell reveal-on-scroll" data-conference-stage>
+                    <p class="sr-only">Interactive conference badge animation. Seven conference cubes labeled CVPR, ICLR, ICCV, ECCV, NeurIPS, ICML, and AAAI fall from above the portrait into a small stage and can be clicked to jump.</p>
+                    <div class="conference-stage-fallback" aria-hidden="true">
+                        <span class="conference-cube conference-cube-static">CVPR</span>
+                        <span class="conference-cube conference-cube-static">ICLR</span>
+                        <span class="conference-cube conference-cube-static">ICCV</span>
+                        <span class="conference-cube conference-cube-static">ECCV</span>
+                        <span class="conference-cube conference-cube-static">NIPS</span>
+                        <span class="conference-cube conference-cube-static">ICML</span>
+                        <span class="conference-cube conference-cube-static">AAAI</span>
+                    </div>
+                    <div class="conference-stage" role="group" aria-label="Interactive conference badge animation. Click a badge to bounce it."></div>
                 </div>
-                <div class="conference-stage" role="group" aria-label="Interactive conference badge animation. Click a badge to bounce it."></div>
             </div>
             <nav class="about-links reveal-stagger" aria-label="Profile links">
                 <span class="about-links-label reveal-item">Links</span>
