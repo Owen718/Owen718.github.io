@@ -499,22 +499,28 @@ a:hover {
   color: inherit;
   cursor: default;
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
-  --affiliation-accent: rgba(196, 153, 58, 0.22);
-  --affiliation-border: rgba(196, 153, 58, 0.24);
-  --affiliation-shadow: rgba(196, 153, 58, 0.12);
-  --affiliation-spotlight-x: 50%;
-  --affiliation-spotlight-y: 50%;
+  --affiliation-accent: rgba(196, 153, 58, 0.24);
+  --affiliation-border: rgba(196, 153, 58, 0.34);
+  --affiliation-shadow: rgba(196, 153, 58, 0.18);
+  --affiliation-reveal-y: 0px;
+  --affiliation-perspective: 1080px;
+  --affiliation-tilt-scale: 1;
+  --affiliation-pop-z: 22px;
+  --affiliation-text-pop-z: 28px;
   --affiliation-rotate-x: 0deg;
   --affiliation-rotate-y: 0deg;
-  --affiliation-lift: 0px;
-  --affiliation-scale: 1;
-  transform: perspective(960px) translateY(var(--affiliation-lift)) scale(var(--affiliation-scale)) rotateX(var(--affiliation-rotate-x)) rotateY(var(--affiliation-rotate-y));
+  --affiliation-origin-x: 50%;
+  --affiliation-spotlight-x: 18%;
+  --affiliation-spotlight-y: 18%;
+  transform: translateY(var(--affiliation-reveal-y)) perspective(var(--affiliation-perspective)) rotateX(var(--affiliation-rotate-x)) rotateY(var(--affiliation-rotate-y));
+  transform-origin: var(--affiliation-origin-x) 50%;
   transform-style: preserve-3d;
   will-change: transform;
   transition:
-    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1),
     background-color 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -525,9 +531,14 @@ a:hover {
   border-radius: inherit;
   background:
     radial-gradient(circle at var(--affiliation-spotlight-x) var(--affiliation-spotlight-y),
-      var(--affiliation-accent) 0%,
-      rgba(255, 255, 255, 0.72) 22%,
-      rgba(255, 255, 255, 0) 58%);
+      rgba(255, 255, 255, 0.92) 0%,
+      var(--affiliation-accent) 18%,
+      rgba(255, 255, 255, 0.14) 34%,
+      rgba(255, 255, 255, 0) 62%),
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.78) 0%,
+      rgba(255, 255, 255, 0.18) 28%,
+      rgba(255, 255, 255, 0) 64%);
   opacity: 0;
   pointer-events: none;
   transition: opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -538,16 +549,22 @@ a:hover {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 0 0 1px var(--affiliation-border);
   opacity: 0;
   pointer-events: none;
   transition: opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .about-affiliation[data-affiliation-theme="nvidia"] {
-  --affiliation-accent: rgba(118, 185, 0, 0.24);
-  --affiliation-border: rgba(118, 185, 0, 0.3);
-  --affiliation-shadow: rgba(118, 185, 0, 0.14);
+  --affiliation-accent: rgba(118, 185, 0, 0.26);
+  --affiliation-border: rgba(118, 185, 0, 0.34);
+  --affiliation-shadow: rgba(118, 185, 0, 0.2);
+  --affiliation-perspective: 760px;
+  --affiliation-tilt-scale: 1.55;
+  --affiliation-pop-z: 32px;
+  --affiliation-text-pop-z: 38px;
 }
 
 .about-affiliation > * {
@@ -560,32 +577,32 @@ a:hover {
   border-color: var(--affiliation-border);
   background: rgba(255, 255, 255, 0.96);
   box-shadow:
-    0 22px 40px rgba(15, 23, 42, 0.12),
-    0 18px 32px var(--affiliation-shadow);
+    0 28px 44px rgba(15, 23, 42, 0.16),
+    0 20px 38px var(--affiliation-shadow);
 }
 
 .about-affiliation.is-hovered::before,
 .about-affiliation.is-hovered::after,
 .about-affiliation:hover::before,
 .about-affiliation:hover::after {
-  opacity: 1;
+  opacity: 0.98;
 }
 
 .about-affiliation-icon,
 .about-affiliation-text {
   transition:
-    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
     opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .about-affiliation.is-hovered .about-affiliation-icon,
 .about-affiliation:hover .about-affiliation-icon {
-  transform: translate3d(0, -3px, 26px) scale(1.05);
+  transform: translate3d(0, -1px, var(--affiliation-pop-z)) scale(1.03);
 }
 
 .about-affiliation.is-hovered .about-affiliation-text,
 .about-affiliation:hover .about-affiliation-text {
-  transform: translate3d(0, -3px, 30px);
+  transform: translate3d(0, -1px, var(--affiliation-text-pop-z));
 }
 
 .about-affiliation-icon {
@@ -597,7 +614,7 @@ a:hover {
 }
 
 .about-affiliation-icon-nvidia {
-  height: 24px;
+  height: 28px;
 }
 
 .about-affiliation-text {
@@ -899,7 +916,7 @@ a:hover {
 }
 
 .js-ready .reveal-on-scroll,
-.js-ready .reveal-item {
+.js-ready .reveal-item:not(.about-affiliation) {
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -908,9 +925,19 @@ a:hover {
 }
 
 .js-ready .reveal-on-scroll.is-visible,
-.js-ready .reveal-item.is-visible {
+.js-ready .reveal-item:not(.about-affiliation).is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.js-ready .about-affiliation.reveal-item {
+  opacity: 0;
+  --affiliation-reveal-y: 20px;
+}
+
+.js-ready .about-affiliation.reveal-item.is-visible {
+  opacity: 1;
+  --affiliation-reveal-y: 0px;
 }
 
 .js-ready .reveal-image {
@@ -960,10 +987,15 @@ a:hover {
   .js-ready .reveal-item,
   .js-ready .reveal-image,
   .conference-cube,
-  .home-cta {
+  .home-cta,
+  .about-affiliation,
+  .about-affiliation:hover,
+  .about-affiliation-icon,
+  .about-affiliation-text {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+    animation: none !important;
   }
 
   .about-affiliation::before,
@@ -1033,6 +1065,7 @@ a:hover {
     background: rgba(255, 255, 255, 0.82);
     border-color: var(--editorial-line);
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+    animation: none;
   }
 
   .about-affiliation:hover .about-affiliation-icon,

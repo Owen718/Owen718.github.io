@@ -35,61 +35,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (affiliationCards.length > 0 && canHover && !prefersReducedMotion) {
     affiliationCards.forEach(function (card) {
-      var frameId = 0;
-      var pointerX = 0;
-      var pointerY = 0;
-
-      function render() {
-        frameId = 0;
+      function updateInteraction(event) {
         var rect = card.getBoundingClientRect();
-        var offsetX = Math.max(0, Math.min(rect.width, pointerX - rect.left));
-        var offsetY = Math.max(0, Math.min(rect.height, pointerY - rect.top));
+        var cardStyle = window.getComputedStyle(card);
+        var tiltScale = parseFloat(cardStyle.getPropertyValue("--affiliation-tilt-scale")) || 1;
+        var offsetX = Math.max(0, Math.min(rect.width, event.clientX - rect.left));
+        var offsetY = Math.max(0, Math.min(rect.height, event.clientY - rect.top));
         var ratioX = rect.width ? offsetX / rect.width : 0.5;
         var ratioY = rect.height ? offsetY / rect.height : 0.5;
+        var rotateY = (ratioX - 0.5) * 40 * tiltScale;
+        var rotateX = (0.5 - ratioY) * 10 * Math.min(tiltScale, 1.18);
+        var originX = ratioX < 0.5 ? "10%" : "90%";
 
+        card.classList.add("is-hovered");
         card.style.setProperty("--affiliation-spotlight-x", offsetX.toFixed(1) + "px");
         card.style.setProperty("--affiliation-spotlight-y", offsetY.toFixed(1) + "px");
-        card.style.setProperty("--affiliation-rotate-x", ((0.5 - ratioY) * 7.5).toFixed(2) + "deg");
-        card.style.setProperty("--affiliation-rotate-y", ((ratioX - 0.5) * 7.5).toFixed(2) + "deg");
-        card.style.setProperty("--affiliation-lift", "-10px");
-        card.style.setProperty("--affiliation-scale", "1.022");
+        card.style.setProperty("--affiliation-rotate-x", rotateX.toFixed(2) + "deg");
+        card.style.setProperty("--affiliation-rotate-y", rotateY.toFixed(2) + "deg");
+        card.style.setProperty("--affiliation-origin-x", originX);
       }
 
-      function queueRender() {
-        if (!frameId) {
-          frameId = window.requestAnimationFrame(render);
-        }
-      }
-
-      function resetCard() {
-        if (frameId) {
-          window.cancelAnimationFrame(frameId);
-          frameId = 0;
-        }
+      function resetInteraction() {
         card.classList.remove("is-hovered");
-        card.style.setProperty("--affiliation-spotlight-x", "50%");
-        card.style.setProperty("--affiliation-spotlight-y", "50%");
+        card.style.setProperty("--affiliation-spotlight-x", "18%");
+        card.style.setProperty("--affiliation-spotlight-y", "18%");
         card.style.setProperty("--affiliation-rotate-x", "0deg");
         card.style.setProperty("--affiliation-rotate-y", "0deg");
-        card.style.setProperty("--affiliation-lift", "0px");
-        card.style.setProperty("--affiliation-scale", "1");
+        card.style.setProperty("--affiliation-origin-x", "50%");
       }
 
-      card.addEventListener("pointerenter", function (event) {
-        pointerX = event.clientX;
-        pointerY = event.clientY;
-        card.classList.add("is-hovered");
-        queueRender();
-      });
-
-      card.addEventListener("pointermove", function (event) {
-        pointerX = event.clientX;
-        pointerY = event.clientY;
-        queueRender();
-      });
-
-      card.addEventListener("pointerleave", resetCard);
-      card.addEventListener("pointercancel", resetCard);
+      card.addEventListener("pointerenter", updateInteraction);
+      card.addEventListener("pointermove", updateInteraction);
+      card.addEventListener("pointerleave", resetInteraction);
+      card.addEventListener("pointercancel", resetInteraction);
     });
   }
 
