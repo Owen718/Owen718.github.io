@@ -29,6 +29,70 @@ document.addEventListener("DOMContentLoaded", function () {
 {{- if .IsHome }}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  var affiliationCards = Array.prototype.slice.call(document.querySelectorAll("[data-affiliation-card]"));
+  var canHover = !window.matchMedia || window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (affiliationCards.length > 0 && canHover && !prefersReducedMotion) {
+    affiliationCards.forEach(function (card) {
+      var frameId = 0;
+      var pointerX = 0;
+      var pointerY = 0;
+
+      function render() {
+        frameId = 0;
+        var rect = card.getBoundingClientRect();
+        var offsetX = Math.max(0, Math.min(rect.width, pointerX - rect.left));
+        var offsetY = Math.max(0, Math.min(rect.height, pointerY - rect.top));
+        var ratioX = rect.width ? offsetX / rect.width : 0.5;
+        var ratioY = rect.height ? offsetY / rect.height : 0.5;
+
+        card.style.setProperty("--affiliation-spotlight-x", offsetX.toFixed(1) + "px");
+        card.style.setProperty("--affiliation-spotlight-y", offsetY.toFixed(1) + "px");
+        card.style.setProperty("--affiliation-rotate-x", ((0.5 - ratioY) * 7.5).toFixed(2) + "deg");
+        card.style.setProperty("--affiliation-rotate-y", ((ratioX - 0.5) * 7.5).toFixed(2) + "deg");
+        card.style.setProperty("--affiliation-lift", "-10px");
+        card.style.setProperty("--affiliation-scale", "1.022");
+      }
+
+      function queueRender() {
+        if (!frameId) {
+          frameId = window.requestAnimationFrame(render);
+        }
+      }
+
+      function resetCard() {
+        if (frameId) {
+          window.cancelAnimationFrame(frameId);
+          frameId = 0;
+        }
+        card.classList.remove("is-hovered");
+        card.style.setProperty("--affiliation-spotlight-x", "50%");
+        card.style.setProperty("--affiliation-spotlight-y", "50%");
+        card.style.setProperty("--affiliation-rotate-x", "0deg");
+        card.style.setProperty("--affiliation-rotate-y", "0deg");
+        card.style.setProperty("--affiliation-lift", "0px");
+        card.style.setProperty("--affiliation-scale", "1");
+      }
+
+      card.addEventListener("pointerenter", function (event) {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+        card.classList.add("is-hovered");
+        queueRender();
+      });
+
+      card.addEventListener("pointermove", function (event) {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+        queueRender();
+      });
+
+      card.addEventListener("pointerleave", resetCard);
+      card.addEventListener("pointercancel", resetCard);
+    });
+  }
+
   var profilePhoto = document.querySelector("[data-random-profile]");
   if (profilePhoto) {
     try {

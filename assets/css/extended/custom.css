@@ -486,6 +486,9 @@ a:hover {
 
 .about-affiliation {
   flex: 1 1 220px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -496,6 +499,93 @@ a:hover {
   color: inherit;
   cursor: default;
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+  --affiliation-accent: rgba(196, 153, 58, 0.22);
+  --affiliation-border: rgba(196, 153, 58, 0.24);
+  --affiliation-shadow: rgba(196, 153, 58, 0.12);
+  --affiliation-spotlight-x: 50%;
+  --affiliation-spotlight-y: 50%;
+  --affiliation-rotate-x: 0deg;
+  --affiliation-rotate-y: 0deg;
+  --affiliation-lift: 0px;
+  --affiliation-scale: 1;
+  transform: perspective(960px) translateY(var(--affiliation-lift)) scale(var(--affiliation-scale)) rotateX(var(--affiliation-rotate-x)) rotateY(var(--affiliation-rotate-y));
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-affiliation::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at var(--affiliation-spotlight-x) var(--affiliation-spotlight-y),
+      var(--affiliation-accent) 0%,
+      rgba(255, 255, 255, 0.72) 22%,
+      rgba(255, 255, 255, 0) 58%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-affiliation::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-affiliation[data-affiliation-theme="nvidia"] {
+  --affiliation-accent: rgba(118, 185, 0, 0.24);
+  --affiliation-border: rgba(118, 185, 0, 0.3);
+  --affiliation-shadow: rgba(118, 185, 0, 0.14);
+}
+
+.about-affiliation > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-affiliation.is-hovered,
+.about-affiliation:hover {
+  border-color: var(--affiliation-border);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 22px 40px rgba(15, 23, 42, 0.12),
+    0 18px 32px var(--affiliation-shadow);
+}
+
+.about-affiliation.is-hovered::before,
+.about-affiliation.is-hovered::after,
+.about-affiliation:hover::before,
+.about-affiliation:hover::after {
+  opacity: 1;
+}
+
+.about-affiliation-icon,
+.about-affiliation-text {
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-affiliation.is-hovered .about-affiliation-icon,
+.about-affiliation:hover .about-affiliation-icon {
+  transform: translate3d(0, -3px, 26px) scale(1.05);
+}
+
+.about-affiliation.is-hovered .about-affiliation-text,
+.about-affiliation:hover .about-affiliation-text {
+  transform: translate3d(0, -3px, 30px);
 }
 
 .about-affiliation-icon {
@@ -875,6 +965,11 @@ a:hover {
     transform: none !important;
     transition: none !important;
   }
+
+  .about-affiliation::before,
+  .about-affiliation::after {
+    opacity: 0 !important;
+  }
 }
 
 @media (max-width: 900px) {
@@ -919,6 +1014,30 @@ a:hover {
   .news-timeline {
     max-height: 520px;
     padding-right: 6px;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .about-affiliation {
+    transform: none;
+  }
+
+  .about-affiliation::before,
+  .about-affiliation::after,
+  .about-affiliation:hover::before,
+  .about-affiliation:hover::after {
+    opacity: 0;
+  }
+
+  .about-affiliation:hover {
+    background: rgba(255, 255, 255, 0.82);
+    border-color: var(--editorial-line);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+  }
+
+  .about-affiliation:hover .about-affiliation-icon,
+  .about-affiliation:hover .about-affiliation-text {
+    transform: none;
   }
 }
 
