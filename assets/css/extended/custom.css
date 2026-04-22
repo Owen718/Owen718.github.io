@@ -452,7 +452,12 @@ a:hover {
 
 .about-grid {
   grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-  align-items: start;
+  align-items: stretch;
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-copy p,
@@ -470,10 +475,67 @@ a:hover {
   margin: 0 0 16px;
 }
 
-.about-panel {
+.about-affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: auto 0 0;
+  padding-top: 10px;
+  transform: translateY(12px);
+}
+
+.about-affiliation {
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--editorial-line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  color: inherit;
+  cursor: default;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+}
+
+.about-affiliation-icon {
+  display: block;
+  width: auto;
+  height: 28px;
+  object-fit: contain;
+  flex: none;
+}
+
+.about-affiliation-icon-nvidia {
+  height: 24px;
+}
+
+.about-affiliation-text {
   display: grid;
+  gap: 2px;
+}
+
+.about-affiliation-name {
+  color: var(--editorial-ink);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.about-affiliation-role {
+  color: var(--editorial-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.about-panel {
+  display: flex;
+  flex-direction: column;
   gap: 18px;
-  align-content: start;
+  min-height: 100%;
 }
 
 .about-portrait-stack {
@@ -585,6 +647,7 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px 12px;
+  margin-top: auto;
   color: #374151;
 }
 
