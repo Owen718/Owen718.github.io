@@ -1,8 +1,4 @@
 .DS_Store
 .hugo_build.lock
 resources
-!static/resources/
-!static/resources/_gen/
-!static/resources/_gen/assets/
-!static/resources/_gen/assets/resume_cv_tianye_2026.pdf
 public
