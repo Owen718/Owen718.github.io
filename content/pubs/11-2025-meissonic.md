@@ -13,8 +13,6 @@ authors:
   - name: Lei Zhu
   - name: Shuicheng Yan
 arxiv: https://arxiv.org/abs/2410.08261
-page: https://huggingface.co/MeissonFlow/Meissonic
 summary: The first SDXL-level high-resolution non-AR T2I model.
 selected: true
 ---
-

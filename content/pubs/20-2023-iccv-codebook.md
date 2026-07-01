@@ -12,8 +12,6 @@ authors:
   - name: Junjie Yin
   - name: Erkang Chen
   - name: Yun Liu
-paper: https://openaccess.thecvf.com/content/ICCV2023/html/Ye_Adverse_Weather_Removal_with_Codebook_Priors_ICCV_2023_paper.html
 selected: false
 ---
-
 
