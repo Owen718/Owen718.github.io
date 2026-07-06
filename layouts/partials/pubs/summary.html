@@ -44,6 +44,7 @@
       {{- end }}
     </div>
 
+    {{- /* Keep featured summaries concise enough for a two-line desktop layout. */ -}}
     {{- $summary := .Summary }}
     {{- if not $summary }}
       {{- $summary = .Params.summary }}
