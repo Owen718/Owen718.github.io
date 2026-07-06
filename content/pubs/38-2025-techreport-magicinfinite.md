@@ -8,8 +8,8 @@ authors:
   - name: Shitong Shao*
   - name: Xuancheng Yang*
   - name: Jiantong Zhao*
-  - name: Hanzhong Guo
-  - name: Terrance Wang
+  - name: Hanzhong Guo*
+  - name: Terrance Wang*
   - name: Qingyu Yin
   - name: Zeke Xie
   - name: Lei Zhu

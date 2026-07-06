@@ -3,11 +3,11 @@ title: "SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffus
 date: 2026-05-14
 venue: arXiv 2026
 authors:
-  - name: Haoyi Zhu
-  - name: Haozhe Liu
-  - name: Yuyang Zhao
-  - name: <strong>Tian Ye</strong>
-  - name: Junsong Chen
+  - name: Haoyi Zhu*
+  - name: Haozhe Liu*
+  - name: Yuyang Zhao*
+  - name: <strong>Tian Ye*</strong>
+  - name: Junsong Chen*
   - name: Jincheng Yu
   - name: Tong He
   - name: Song Han
