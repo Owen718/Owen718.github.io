@@ -16,6 +16,7 @@ authors:
   - name: Wei Li
   - name: Michael Lingelbach
   - name: Daquan Zhou
+page: https://magicinfinite.github.io/
 summary: Technical report for Hedra Inc.'s Character-3 model.
 selected: false
 ---

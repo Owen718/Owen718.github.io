@@ -8,5 +8,7 @@ authors:
   - name: Lujia Wang
   - name: Lei Zhu
 arxiv: https://arxiv.org/abs/2509.22414
+code: https://github.com/W2GenAI-Lab/LucidFlux
+page: https://w2genai-lab.github.io/LucidFlux/
 selected: true
 ---
