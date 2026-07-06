@@ -9,6 +9,6 @@ authors:
 arxiv: https://arxiv.org/abs/2511.18050
 code: https://github.com/W2GenAI-Lab/UltraFlux
 page: https://w2genai-lab.github.io/UltraFlux/
-summary: A native 4K text-to-image model built through data-model co-design, delivering photorealistic generation across diverse aspect ratios and matching or surpassing Seedream 4.0.
+summary: Native 4K text-to-image generation across diverse aspect ratios, matching or surpassing Seedream 4.0.
 selected: true
 ---
