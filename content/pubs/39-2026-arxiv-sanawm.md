@@ -15,5 +15,6 @@ authors:
 arxiv: https://arxiv.org/abs/2605.15178
 code: https://github.com/NVlabs/Sana
 page: https://nvlabs.github.io/Sana/WM/
+summary: An efficient open-source world model for minute-long 720p video generation with precise 6-DoF camera control and single-GPU inference.
 selected: false
 ---
