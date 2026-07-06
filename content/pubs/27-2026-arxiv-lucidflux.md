@@ -10,5 +10,6 @@ authors:
 arxiv: https://arxiv.org/abs/2509.22414
 code: https://github.com/W2GenAI-Lab/LucidFlux
 page: https://w2genai-lab.github.io/LucidFlux/
+summary: A caption-free 14B diffusion transformer for universal image restoration, delivering photorealistic recovery across diverse real-world degradations and outperforming leading commercial systems such as Meitu SR.
 selected: true
 ---
