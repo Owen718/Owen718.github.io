@@ -62,7 +62,13 @@ After running continuously for some time, the agents had accumulated **419 lesso
 - partial observability—an enemy disappearing into grass does not make the area safe;
 - skill timing—activating a skill before an emergency dodge may consume the action frame and cause a death.
 
+![Evidence-backed mechanics lessons on the shared agent blackboard](./images/shared-lessons-mechanics.png)
+*The shared blackboard stores general mechanics together with match IDs and replay-frame evidence—not strategy-specific code.*
+
 I later fed this general lessons repository directly to Star-Chasing Deity. It became a key ingredient in the final push into the Top 10. The agent actively read the existing lessons during leaderboard optimization and wrote back 12 new ones.
+
+![Technique lessons accumulated by parallel AgenTank agents](./images/shared-lessons-technique.png)
+*Technique lessons distilled from parallel online failures across boost, freeze, and shield agents.*
 
 The point was not to tell the agent which code to copy. It was to eliminate large regions of the search space already known to be harmful, so later iterations would not keep paying for the same failures.
 

@@ -58,7 +58,13 @@ cover:
 
 这三个 Agent 持续运行一段时间后，知识库积累了 **419 条经验**。其中大部分来自 boost、freeze、shield 这三个异构坦克的线上失败，涵盖技能特性（如 boost 在奇数距离追星可能过冲）、地图陷阱（某些星星位于敌方必然枪线上）、部分可观测处理（草内敌人消失不能视为安全）、技能施放时机（紧急闪避时先开技能可能占用动作帧导致死亡）等。
 
+![共享 Agent blackboard 中带证据的 mechanics 经验](/blogs/from-zero-to-global-top-10-agent-validation-pipeline/images/shared-lessons-mechanics.png)
+*共享 blackboard 只保存通用机制，并为每条经验附带对局 ID 和 replay 帧证据，不写入具体策略代码。*
+
 这份通用 lessons 库后期被我直接喂给了“追星之神”，成为它突破到 Top 10 的关键助力。它在冲榜阶段主动读取了这批经验，并在优化过程中回写了 12 条。
+
+![多个 AgenTank Agent 累积的 technique 经验](/blogs/from-zero-to-global-top-10-agent-validation-pipeline/images/shared-lessons-technique.png)
+*从 boost、freeze 和 shield 三条并行路线的线上失败中提炼出的 technique 经验。*
 
 整套机制的作用不是直接告诉 Agent 该复制哪段代码，而是预先消除大量已知的负方向改动，让后续迭代不必重复支付同样的失败成本。
 
