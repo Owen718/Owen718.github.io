@@ -103,6 +103,30 @@ a:hover {
   color: var(--editorial-body);
 }
 
+.post-language-switch {
+  display: flex;
+  margin-top: 14px;
+}
+
+.post-language-switch a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 13px;
+  border: 1px solid var(--editorial-line);
+  border-radius: 999px;
+  background: var(--editorial-soft);
+  color: var(--editorial-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.post-language-switch a:hover {
+  border-color: var(--editorial-accent);
+  color: var(--editorial-accent-hover);
+}
+
 .home-main {
   display: grid;
   gap: 0;

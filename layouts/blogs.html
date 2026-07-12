@@ -17,7 +17,7 @@
   </div>
   {{- end }}
 
-  {{- $pages := .Pages.ByDate.Reverse }}
+  {{- $pages := (where .Pages "Params.unlisted" "ne" true).ByDate.Reverse }}
   {{- if gt (len $pages) 0 }}
   {{- $paginator := .Paginate $pages }}
   <div class="section-list">

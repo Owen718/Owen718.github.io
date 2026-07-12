@@ -6,6 +6,9 @@ summary: "How structured priors, shared failure memory, replay-driven iteration,
 description: "A practical account of building an evolvable validation pipeline that took an AgenTank coding agent from zero points to the global Top 10."
 showtoc: true
 tocopen: true
+alternate_url: "/blogs/from-zero-to-global-top-10-agent-validation-pipeline-zh/"
+alternate_label: "中文原版"
+alternate_lang: "zh-CN"
 cover:
   image: "images/star-chasing-deity-rank-7.png"
   alt: "Star-Chasing Deity at global rank number seven on AgenTank"
