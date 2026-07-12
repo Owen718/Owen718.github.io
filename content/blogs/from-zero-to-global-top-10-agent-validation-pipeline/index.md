@@ -1,5 +1,5 @@
 ---
-title: "From Zero to the Global Top 10 in 24 Hours: Building an Evolvable Validation Pipeline for a Coding Agent"
+title: "How a Coding Agent Reached the Global Top 10 on AgentTank in Under 24 Hours"
 date: 2026-07-12T00:19:00+08:00
 draft: false
 summary: "How structured priors, shared failure memory, replay-driven iteration, and rigid validation gates took an AgenTank coding agent from unranked to a global peak of #7."

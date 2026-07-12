@@ -1,5 +1,5 @@
 ---
-title: "24 小时内从 0 分到全球 Top 10：为 Coding Agent 搭建一套可进化的验证管线"
+title: "一个 Coding Agent 如何在 24 小时内冲进 AgentTank 全球 Top 10"
 date: 2026-07-12T00:19:00+08:00
 draft: false
 unlisted: true
