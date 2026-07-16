@@ -93,7 +93,6 @@ Add curated hero cards for:
 
 - `UltraFlux`
 - `LucidFlux`
-- `LucidNFT`
 
 Each card should have a title, short descriptor, and external link.
 
@@ -127,7 +126,6 @@ Render cards for:
 
 - `UltraFlux`
 - `LucidFlux`
-- `LucidNFT`
 - `PosterCraft`
 - `MagicInfinite`
 

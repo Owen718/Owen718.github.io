@@ -71,7 +71,6 @@ The homepage will be reorganized into five sections:
 
 - `UltraFlux`
 - `LucidFlux`
-- `LucidNFT`
 
 Each card should contain a title, short label or venue, and a one-line summary.
 
@@ -83,7 +82,6 @@ Each card should contain a title, short label or venue, and a one-line summary.
 
 - `UltraFlux`
 - `LucidFlux`
-- `LucidNFT`
 - `PosterCraft`
 - `MagicInfinite`
 
