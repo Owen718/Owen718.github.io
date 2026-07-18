@@ -2,7 +2,14 @@
 
 <article class="post-single">
   <header class="post-header">
+    {{- if .Params.harness_id }}
+    <div class="breadcrumbs"><a href="{{ site.Home.RelPermalink }}">Home</a>&nbsp;»&nbsp;<a href="{{ "/agent-harness/" | relURL }}">Agent Harness</a></div>
+    {{- else }}
     {{ partial "breadcrumbs.html" . }}
+    {{- end }}
+    {{- with .Params.harness_id }}
+    <div class="harness-post-marker">Agent Harness / {{ printf "%02d" (int .) }}{{ with $.Params.harness_type }} · {{ . }}{{ end }}</div>
+    {{- end }}
     <h1 class="post-title entry-hint-parent">
       {{ .Title }}
       {{- if .Draft }}
@@ -31,6 +38,12 @@
       <a href="{{ . | relURL }}" hreflang="{{ $.Params.alternate_lang | default "en" }}">{{ $.Params.alternate_label | default "Switch language" }}</a>
     </nav>
     {{- end }}
+    {{- with .Params.harness_takeaway }}
+    <aside class="harness-post-takeaway">
+      <span>Key takeaway</span>
+      <p>{{ . }}</p>
+    </aside>
+    {{- end }}
   </header>
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
@@ -53,7 +66,11 @@
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
-    {{- if (.Param "ShowPostNavLinks") }}
+    {{- if .Params.harness_id }}
+    <nav class="harness-post-back" aria-label="Agent Harness navigation">
+      <a href="{{ "/agent-harness/" | relURL }}">← Back to Agent Harness</a>
+    </nav>
+    {{- else if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
     {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}

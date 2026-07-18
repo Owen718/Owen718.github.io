@@ -2,6 +2,14 @@
 title: "How a Coding Agent Reached the Global Top 10 on AgentTank in Under 24 Hours"
 date: 2026-07-12T00:19:00+08:00
 draft: false
+hide_from_blogs: true
+harness_id: 1
+harness_type: Case Study
+harness_topics:
+  - Validation
+  - Memory
+  - Multi-Agent
+harness_takeaway: "A strong model is not enough. Give it a constrained search space, cumulative failures, and gates it cannot negotiate away."
 summary: "How structured priors, shared failure memory, replay-driven iteration, and rigid validation gates took an AgenTank coding agent from unranked to a global peak of #7."
 description: "A practical account of building an evolvable validation pipeline that took an AgenTank coding agent from zero points to the global Top 10."
 showtoc: true

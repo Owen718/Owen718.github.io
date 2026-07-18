@@ -3,6 +3,14 @@ title: "一个 Coding Agent 如何在 24 小时内冲进 AgentTank 全球 Top 10
 date: 2026-07-12T00:19:00+08:00
 draft: false
 unlisted: true
+hide_from_blogs: true
+harness_id: 1
+harness_type: 案例研究
+harness_topics:
+  - 验证
+  - 记忆
+  - 多智能体
+harness_takeaway: "仅有强模型并不够，还需要受约束的搜索空间、可积累的失败经验，以及 Agent 无法自行绕过的验证 gate。"
 summary: "深度研究、共享失败记忆、线上回放和刚性验证 gate，如何让一个 AgenTank Coding Agent 从未定级冲到全球最高第 7。"
 description: "从零分到全球 Top 10：一套面向 Coding Agent 的可进化验证管线实践。"
 showtoc: true

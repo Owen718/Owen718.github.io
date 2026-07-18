@@ -1,0 +1,102 @@
+{{- define "main" }}
+
+{{- $pages := where site.RegularPages "Params.harness_id" "ne" nil }}
+{{- $pages = where $pages "Params.unlisted" "ne" true }}
+{{- $pages = sort $pages "Params.harness_id" "desc" }}
+
+<div class="harness-shell">
+  <section class="harness-hero">
+    <div class="harness-hero-copy">
+      <p class="harness-eyebrow">A living technical series</p>
+      <h1>Agent<br>Harness</h1>
+      <p class="harness-lede">Engineering reliable coding agents through structured context, executable tools, cumulative memory, external evaluation, and disciplined feedback loops.</p>
+      {{- if gt (len $pages) 0 }}
+      <a class="harness-button" href="#series">Read the series <span aria-hidden="true">→</span></a>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="harness-signal-strip" aria-label="Series summary">
+    <div class="harness-signal harness-signal-premise">
+      <span class="harness-micro">The premise</span>
+      <strong>The system around the model determines the ceiling.</strong>
+    </div>
+    <div class="harness-signal">
+      <span class="harness-micro">Published</span>
+      <strong>{{ printf "%02d" (len $pages) }} {{ if eq (len $pages) 1 }}case study{{ else }}articles{{ end }}</strong>
+    </div>
+  </section>
+
+  <section class="harness-series" id="series">
+    <header class="harness-section-head">
+      <div>
+        <p class="harness-micro harness-section-kicker">Series index</p>
+        <h2>Field-tested notes</h2>
+      </div>
+      <p>Case studies and design patterns for agents that must improve continuously without losing reliability, traceability, or control.</p>
+    </header>
+
+    {{- if gt (len $pages) 0 }}
+    <div class="harness-article-list">
+      {{- range $pages }}
+      <article class="harness-entry">
+        <div class="harness-entry-index">
+          <span class="harness-micro">Harness</span>
+          <strong>{{ printf "%02d" (int .Params.harness_id) }}</strong>
+        </div>
+        <div class="harness-entry-copy">
+          <div class="harness-chips">
+            {{- with .Params.harness_type }}<span>{{ . }}</span>{{- end }}
+            {{- range .Params.harness_topics }}<span>{{ . }}</span>{{- end }}
+          </div>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Summary | plainify | htmlUnescape }}</p>
+          <div class="harness-entry-meta">
+            <span>{{ .Date.Format "January 2, 2006" }}</span>
+            <span>{{ .ReadingTime }} min read</span>
+            {{- with .Params.alternate_url }}<span>English / 中文</span>{{- end }}
+          </div>
+        </div>
+        <aside class="harness-entry-takeaway">
+          <div>
+            <span class="harness-micro">Key takeaway</span>
+            <p>{{ .Params.harness_takeaway | default .Description }}</p>
+          </div>
+          <a href="{{ .RelPermalink }}">Read Harness {{ printf "%02d" (int .Params.harness_id) }} →</a>
+        </aside>
+      </article>
+      {{- end }}
+    </div>
+    {{- else }}
+    <div class="section-empty-state">
+      <p>No Agent Harness articles are published yet.</p>
+    </div>
+    {{- end }}
+  </section>
+
+  <section class="harness-principles">
+    <header>
+      <h2>Operating principles</h2>
+      <span class="harness-micro">Agent Harness / Manifesto</span>
+    </header>
+    <div class="harness-principle-grid">
+      <article>
+        <span class="harness-principle-number">01</span>
+        <h3>Constrain before searching.</h3>
+        <p>Turn domain knowledge into enforceable architecture and invariants.</p>
+      </article>
+      <article>
+        <span class="harness-principle-number">02</span>
+        <h3>Make failure cumulative.</h3>
+        <p>Store reusable lessons with evidence, not unverified anecdotes.</p>
+      </article>
+      <article>
+        <span class="harness-principle-number">03</span>
+        <h3>Let external gates decide.</h3>
+        <p>Pre-register validation and rollback rules before results arrive.</p>
+      </article>
+    </div>
+  </section>
+</div>
+
+{{- end }}

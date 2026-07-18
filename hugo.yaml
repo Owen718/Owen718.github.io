@@ -107,6 +107,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - name: Agent Harness
+      url: /agent-harness/
+      weight: 2
     - name: Blogs
       url: /blogs/
       weight: 5
