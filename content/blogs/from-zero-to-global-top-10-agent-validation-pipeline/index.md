@@ -10,6 +10,10 @@ harness_topics:
   - Memory
   - Multi-Agent
 harness_takeaway: "A strong model is not enough. Give it a constrained search space, cumulative failures, and gates it cannot negotiate away."
+harness_lessons:
+  - "Constrain before searching."
+  - "Make failure cumulative."
+  - "Let external gates decide."
 summary: "How structured priors, shared failure memory, replay-driven iteration, and rigid validation gates took an AgenTank coding agent from unranked to a global peak of #7."
 description: "A practical account of building an evolvable validation pipeline that took an AgenTank coding agent from zero points to the global Top 10."
 showtoc: true

@@ -39,10 +39,11 @@
     {{- if gt (len $pages) 0 }}
     <div class="harness-article-list">
       {{- range $pages }}
+      {{- $harnessID := int .Params.harness_id }}
       <article class="harness-entry">
         <div class="harness-entry-index">
           <span class="harness-micro">Harness</span>
-          <strong>{{ printf "%02d" (int .Params.harness_id) }}</strong>
+          <strong>{{ printf "%02d" $harnessID }}</strong>
         </div>
         <div class="harness-entry-copy">
           <div class="harness-chips">
@@ -62,8 +63,21 @@
             <span class="harness-micro">Key takeaway</span>
             <p>{{ .Params.harness_takeaway | default .Description }}</p>
           </div>
-          <a href="{{ .RelPermalink }}">Read Harness {{ printf "%02d" (int .Params.harness_id) }} →</a>
+          <a href="{{ .RelPermalink }}">Read Harness {{ printf "%02d" $harnessID }} →</a>
         </aside>
+        {{- with .Params.harness_lessons }}
+        <footer class="harness-entry-lessons">
+          <div class="harness-entry-lessons-label">
+            <span class="harness-micro">From Harness {{ printf "%02d" $harnessID }}</span>
+            <strong>Core lessons</strong>
+          </div>
+          <ol>
+            {{- range $index, $lesson := . }}
+            <li><span>{{ printf "%02d" (add $index 1) }}</span><strong>{{ $lesson }}</strong></li>
+            {{- end }}
+          </ol>
+        </footer>
+        {{- end }}
       </article>
       {{- end }}
     </div>
@@ -74,29 +88,6 @@
     {{- end }}
   </section>
 
-  <section class="harness-principles">
-    <header>
-      <h2>Operating principles</h2>
-      <span class="harness-micro">Agent Harness / Manifesto</span>
-    </header>
-    <div class="harness-principle-grid">
-      <article>
-        <span class="harness-principle-number">01</span>
-        <h3>Constrain before searching.</h3>
-        <p>Turn domain knowledge into enforceable architecture and invariants.</p>
-      </article>
-      <article>
-        <span class="harness-principle-number">02</span>
-        <h3>Make failure cumulative.</h3>
-        <p>Store reusable lessons with evidence, not unverified anecdotes.</p>
-      </article>
-      <article>
-        <span class="harness-principle-number">03</span>
-        <h3>Let external gates decide.</h3>
-        <p>Pre-register validation and rollback rules before results arrive.</p>
-      </article>
-    </div>
-  </section>
 </div>
 
 {{- end }}

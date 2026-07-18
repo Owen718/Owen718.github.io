@@ -1338,7 +1338,6 @@ a:hover {
 }
 
 .harness-section-head h2,
-.harness-principles h2,
 .home-harness-intro h2 {
   margin: 0;
   font-family: "Oswald", Impact, "Arial Narrow", sans-serif;
@@ -1478,67 +1477,64 @@ a:hover {
   font-weight: 700;
 }
 
-.harness-principles {
-  margin-top: 64px;
-  padding: 34px 36px;
-  background: #101217;
-  color: #ffffff;
+.harness-entry-lessons {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  border-top: 1px solid var(--editorial-line);
+  background: #f8fafc;
 }
 
-.harness-principles > header {
+.harness-entry-lessons-label {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 28px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 20px 28px;
+  border-right: 1px solid var(--editorial-line);
 }
 
-.harness-principles h2 {
-  color: #ffffff;
-  font-size: 2.2rem;
+.harness-entry-lessons-label .harness-micro {
+  color: var(--editorial-accent);
 }
 
-.harness-principles > header .harness-micro {
-  color: #64748b;
+.harness-entry-lessons-label > strong {
+  color: var(--editorial-ink);
+  font-size: 0.92rem;
 }
 
-.harness-principle-grid {
+.harness-entry-lessons ol {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid #313642;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.harness-principle-grid article {
-  padding: 24px 25px 4px 0;
-  border-right: 1px solid #313642;
+.harness-entry-lessons li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 20px;
+  border-right: 1px solid var(--editorial-line);
 }
 
-.harness-principle-grid article + article {
-  padding-left: 25px;
-}
-
-.harness-principle-grid article:last-child {
+.harness-entry-lessons li:last-child {
   border-right: 0;
 }
 
-.harness-principle-number {
-  color: #60a5fa;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
-.harness-principle-grid h3 {
-  margin: 16px 0 9px;
-  color: #ffffff;
-  font-size: 1rem;
-}
-
-.harness-principle-grid p {
-  margin: 0;
+.harness-entry-lessons li span {
   color: #94a3b8;
-  font-size: 0.82rem;
-  line-height: 1.65;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.harness-entry-lessons li strong {
+  color: #334155;
+  font-size: 0.84rem;
+  line-height: 1.4;
 }
 
 /* Agent Harness module on the homepage */
@@ -1696,7 +1692,6 @@ a:hover {
   .harness-signal-strip,
   .harness-section-head,
   .harness-entry,
-  .harness-principle-grid,
   .home-harness-module {
     grid-template-columns: 1fr;
   }
@@ -1727,14 +1722,25 @@ a:hover {
     border-top: 1px solid var(--editorial-line);
   }
 
-  .harness-principle-grid article,
-  .harness-principle-grid article + article {
-    padding: 22px 0;
-    border-right: 0;
-    border-bottom: 1px solid #313642;
+  .harness-entry-lessons {
+    grid-template-columns: 1fr;
   }
 
-  .harness-principle-grid article:last-child {
+  .harness-entry-lessons-label {
+    border-right: 0;
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  .harness-entry-lessons ol {
+    grid-template-columns: 1fr;
+  }
+
+  .harness-entry-lessons li {
+    border-right: 0;
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  .harness-entry-lessons li:last-child {
     border-bottom: 0;
   }
 
@@ -1774,16 +1780,6 @@ a:hover {
 
   .harness-entry h3 {
     font-size: 1.5rem;
-  }
-
-  .harness-principles {
-    padding: 28px 24px;
-  }
-
-  .harness-principles > header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
   }
 
   .home-harness-intro,
