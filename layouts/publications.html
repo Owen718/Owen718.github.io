@@ -1,31 +1,3 @@
 {{- define "main" }}
-
-<section class="pubs-shell">
-  <header class="page-header page-header-editorial">
-    <p class="section-kicker">Publications</p>
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">
-      {{ .Description }}
-    </div>
-    {{- end }}
-  </header>
-
-  {{- if .Content }}
-  <div class="post-content pubs-intro">
-    {{ .Content }}
-  </div>
-  {{- end }}
-
-  {{- $pages := .Pages.ByDate.Reverse }}
-  {{- $paginator := .Paginate $pages }}
-  <div class="pubs-list">
-    {{- range $paginator.Pages }}
-    {{- .Render "summary" }}
-    {{- end }}
-  </div>
-
-  {{- partial "pagination.html" . }}
-</section>
-
+{{- partial "pubs/index.html" . }}
 {{- end }}

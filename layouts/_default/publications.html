@@ -1,22 +1,3 @@
 {{- define "main" }}
-
-<section class="pubs-shell">
-  <header class="page-header page-header-editorial">
-    <p class="section-kicker">Publications</p>
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">
-      {{ .Description }}
-    </div>
-    {{- end }}
-  </header>
-
-  {{- $pubs := union .RegularPages .Sections }}
-  <div class="pubs-list">
-    {{- range $pubs }}
-    {{- partial "pubs/summary.html" . }}
-    {{- end }}
-  </div>
-</section>
-
+{{- partial "pubs/index.html" . }}
 {{- end }}

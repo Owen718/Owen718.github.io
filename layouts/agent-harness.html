@@ -7,23 +7,16 @@
 <div class="harness-shell">
   <section class="harness-hero">
     <div class="harness-hero-copy">
-      <p class="harness-eyebrow">A living technical series</p>
-      <h1>Agent<br>Harness</h1>
+      <p class="harness-eyebrow">Field notes on agent systems</p>
+      <h1>Agent Harness</h1>
       <p class="harness-lede">Engineering reliable coding agents through structured context, executable tools, cumulative memory, external evaluation, and disciplined feedback loops.</p>
       {{- if gt (len $pages) 0 }}
-      <a class="harness-button" href="#series">Read the series <span aria-hidden="true">→</span></a>
+      <a class="harness-button" href="#series">Browse the series <span aria-hidden="true">↓</span></a>
       {{- end }}
     </div>
-  </section>
-
-  <section class="harness-signal-strip" aria-label="Series summary">
-    <div class="harness-signal harness-signal-premise">
-      <span class="harness-micro">The premise</span>
-      <strong>The system around the model determines the ceiling.</strong>
-    </div>
-    <div class="harness-signal">
-      <span class="harness-micro">Published</span>
-      <strong>{{ printf "%02d" (len $pages) }} {{ if eq (len $pages) 1 }}case study{{ else }}articles{{ end }}</strong>
+    <div class="harness-hero-note">
+      <span class="harness-micro">Premise</span>
+      <p>The system around the model determines the ceiling.</p>
     </div>
   </section>
 

@@ -1,8 +1,23 @@
+<script>
+document.documentElement.classList.add("is-editorial-site");
 {{- if .IsHome }}
-<script>document.documentElement.classList.add("is-homepage");</script>
+document.documentElement.classList.add("is-homepage");
 {{- end }}
 {{- if eq .Layout "agent-harness" }}
-<script>document.documentElement.classList.add("is-harness-page");</script>
+document.documentElement.classList.add("is-harness-page");
+{{- end }}
+{{- if and .IsPage (eq .Section "blogs") }}
+document.documentElement.classList.add("is-article-page");
+{{- end }}
+{{- if and .IsPage (eq .Section "pubs") }}
+document.documentElement.classList.add("is-publication-page");
+{{- end }}
+{{- if .Params.harness_id }}
+document.documentElement.classList.add("is-harness-post");
+{{- end }}
+</script>
+{{- with .Params.alternate_url }}
+<link rel="alternate" hreflang="{{ $.Params.alternate_lang | default "en" }}" href="{{ . | absURL }}">
 {{- end }}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,0 +1,56 @@
+{{- define "main" }}
+
+{{- $links := slice }}
+{{- with .Params.paper }}{{ $links = $links | append (dict "label" "PDF" "url" .) }}{{ end }}
+{{- with .Params.arxiv }}{{ $links = $links | append (dict "label" "arXiv" "url" .) }}{{ end }}
+{{- with .Params.code }}{{ $links = $links | append (dict "label" "Code" "url" .) }}{{ end }}
+{{- with .Params.page }}{{ $links = $links | append (dict "label" "Project page" "url" .) }}{{ end }}
+{{- with .Params.website }}{{ $links = $links | append (dict "label" "Website" "url" .) }}{{ end }}
+
+<article class="publication-single">
+  <header class="publication-single-header">
+    <div class="breadcrumbs">
+      <a href="{{ site.Home.RelPermalink }}">Home</a>&nbsp;»&nbsp;<a href="{{ "/pubs/" | relURL }}">Publications</a>
+    </div>
+    <p class="publication-single-kicker">Publication</p>
+    <h1>{{ .Title }}</h1>
+
+    {{- with .Params.authors }}
+    <p class="publication-single-authors">
+      {{- range $index, $author := . -}}
+        {{- if $index }}, {{ end -}}
+        {{- $author.name | safeHTML -}}
+      {{- end -}}
+    </p>
+    {{- end }}
+
+    <div class="publication-single-row">
+      {{- with .Params.venue }}<span class="publication-single-venue">{{ . }}</span>{{ end }}
+      {{- if gt (len $links) 0 }}
+      <nav class="publication-single-links" aria-label="Publication resources">
+        {{- range $links }}
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>
+        {{- end }}
+      </nav>
+      {{- end }}
+    </div>
+  </header>
+
+  {{- with .Params.summary }}
+  <p class="publication-single-summary">{{ . }}</p>
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content publication-single-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="publication-single-footer">
+    <a href="{{ "/pubs/" | relURL }}">← All publications</a>
+  </footer>
+</article>
+
+{{- end }}

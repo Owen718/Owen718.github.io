@@ -27,10 +27,9 @@
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
-      {{- partial "translation_list.html" . -}}
-      {{- partial "edit_post.html" . -}}
-      {{- partial "post_canonical.html" . -}}
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006.01.02" }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{{ if eq .Params.alternate_lang "en" }}{{ .ReadingTime }} 分钟阅读{{ else }}{{ .ReadingTime }} min read{{ end }}</span>
     </div>
     {{- end }}
     {{- with .Params.alternate_url }}

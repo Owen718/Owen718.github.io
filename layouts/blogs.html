@@ -24,21 +24,26 @@
   <div class="section-list">
     {{- range $paginator.Pages }}
     <article class="post-entry section-entry">
-      <header class="entry-header">
-        <h2 class="entry-hint-parent">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h2>
-      </header>
-      {{- if not (.Param "hideSummary") }}
-      <div class="entry-content">
-        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+      <div class="section-entry-date" aria-label="Article date and reading time">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">
+          <span>{{ .Date.Format "Jan 02" }}</span>
+          <strong>{{ .Date.Format "2006" }}</strong>
+        </time>
+        <span>{{ .ReadingTime }} min read</span>
       </div>
-      {{- end }}
-      {{- if not (.Param "hideMeta") }}
-      <footer class="entry-footer">
-        {{- partial "post_meta.html" . -}}
-      </footer>
-      {{- end }}
+      <div class="section-entry-copy">
+        <header class="entry-header">
+          <h2 class="entry-hint-parent">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h2>
+        </header>
+        {{- if not (.Param "hideSummary") }}
+        <div class="entry-content">
+          <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+        </div>
+        {{- end }}
+      </div>
+      <span class="section-entry-arrow" aria-hidden="true">↗</span>
       <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
     </article>
     {{- end }}
