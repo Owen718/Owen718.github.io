@@ -1,27 +1,45 @@
 {{- with site.Params.homeInfoParams }}
-<section class="home-hero reveal-on-scroll">
-    <div class="home-hero-panel">
-        <p class="home-kicker">Generative Vision Research</p>
-        <h1 class="home-title">{{ .Title | markdownify }}</h1>
-        <p class="home-role">PhD Candidate at HKUST,Guangzhou</p>
-        <p class="home-manifesto">Pushing the frontiers of Generative Vision. My work bridges state-of-the-art foundation models and scalable architectures to enable boundless human-AI co-creation.</p>
-        <div class="home-cta-row">
-            <a class="home-cta home-cta-primary" href="{{ "/pubs/" | relURL }}">Publications</a>
-            <a class="home-cta home-cta-secondary" href="#news-highlights">News & Highlights</a>
+<section class="editorial-hero reveal-on-scroll" aria-labelledby="home-title">
+    <div class="editorial-hero-copy">
+        <p class="editorial-label">Generative vision · systems research</p>
+        <h1 id="home-title">Tian <span>(Owen)</span> Ye</h1>
+        <p class="editorial-identity">PhD Candidate at HKUST(GZ) <span aria-hidden="true">·</span> Research Intern at NVIDIA</p>
+        <p class="editorial-statement">I build efficient generative vision systems—from native 4K image synthesis and
+            universal restoration to long-horizon world models and accelerated video generation.</p>
+        <nav class="editorial-hero-links" aria-label="Primary profile links">
+            <a href="#selected-works">Selected work <span aria-hidden="true">↓</span></a>
+            <a href="{{ "/pubs/" | relURL }}">Publications <span aria-hidden="true">↗</span></a>
+            <a href="https://scholar.google.com/citations?user=1sGXZ-wAAAAJ&hl=en" target="_blank"
+                rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+        </nav>
+    </div>
+
+    <figure class="editorial-portrait">
+        <div class="editorial-portrait-frame">
+            <img src="{{ "/profile/portrait_2026-04.jpg" | relURL }}" alt="Portrait of Tian (Owen) Ye" />
         </div>
-        <div class="home-meta-grid reveal-stagger" aria-label="Research areas and focus">
-            <div class="home-meta-item reveal-item">
-                <span class="home-meta-label">Research</span>
-                <strong>AIGC</strong>
-            </div>
-            <div class="home-meta-item reveal-item">
-                <span class="home-meta-label">Core Models</span>
-                <strong>Diffusion Models</strong>
-            </div>
-            <div class="home-meta-item reveal-item">
-                <span class="home-meta-label">Long-term Bet</span>
-                <strong>Boundless Human-AI Co-Creation</strong>
-            </div>
+        <figcaption>
+            <span>Researching generative AI and foundation models</span>
+            <span>Guangzhou · 2026</span>
+        </figcaption>
+    </figure>
+
+    <div class="editorial-facts" aria-label="Selected research milestones">
+        <div class="editorial-fact">
+            <strong>10+</strong>
+            <span>Top-tier papers</span>
+        </div>
+        <div class="editorial-fact">
+            <strong>02</strong>
+            <span>CVPR Highlights</span>
+        </div>
+        <div class="editorial-fact">
+            <strong>01</strong>
+            <span>ECCV Oral</span>
+        </div>
+        <div class="editorial-fact editorial-fact-wide">
+            <strong>Open</strong>
+            <span>Research built for reuse</span>
         </div>
     </div>
 </section>

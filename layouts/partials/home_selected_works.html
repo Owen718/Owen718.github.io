@@ -1,34 +1,56 @@
-<section id="selected-works" class="home-section reveal-on-scroll">
-    <div class="section-heading">
+<section id="selected-works" class="editorial-section selected-work reveal-on-scroll" aria-labelledby="selected-work-title">
+    <header class="editorial-section-head">
+        <p class="editorial-section-number" aria-hidden="true">01</p>
         <div>
-            <p class="section-kicker">Recent Projects</p>
-            <h2>Representative projects across generation, restoration, and deployment.</h2>
+            <p class="editorial-label">Selected work</p>
+            <h2 id="selected-work-title">Research made concrete.</h2>
         </div>
-    </div>
-    <div class="project-grid">
-        <a class="project-card" href="https://nvlabs.github.io/Sana/Video2/" target="_blank" rel="noopener noreferrer">
-            <span class="work-meta">Open Source · 5B / 14B</span>
-            <h3>SANA-Video 2.0</h3>
-            <p>Hybrid linear–softmax video diffusion transformers delivering high-quality 720p generation in 13.06 seconds on a single H100.</p>
-            <span class="project-link">Project Page</span>
+        <a class="editorial-section-link" href="{{ "/pubs/" | relURL }}">All publications <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <div class="work-index">
+        <a class="work-index-row" href="https://nvlabs.github.io/Sana/Video2/" target="_blank"
+            rel="noopener noreferrer">
+            <span class="work-index-number">01</span>
+            <div class="work-index-title">
+                <span class="work-index-meta">Open source · 2026</span>
+                <h3>SANA-Video 2.0</h3>
+            </div>
+            <p>Hybrid 5B and 14B video models delivering high-quality 720p generation in 13.06 seconds on a single H100.</p>
+            <span class="work-index-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="project-card" href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">
-            <span class="work-meta">CVPR 2026</span>
-            <h3>UltraFlux</h3>
+
+        <a class="work-index-row" href="https://w2genai-lab.github.io/UltraFlux/" target="_blank"
+            rel="noopener noreferrer">
+            <span class="work-index-number">02</span>
+            <div class="work-index-title">
+                <span class="work-index-meta">CVPR 2026 Highlight</span>
+                <h3>UltraFlux</h3>
+            </div>
             <p>Data-model co-design for high-quality native 4K text-to-image generation across diverse aspect ratios.</p>
-            <span class="project-link">Project Page</span>
+            <span class="work-index-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="project-card" href="https://w2genai-lab.github.io/LucidFlux/" target="_blank" rel="noopener noreferrer">
-            <span class="work-meta">ICLR 2026</span>
-            <h3>LucidFlux</h3>
-            <p>Caption-free universal image restoration driven by a large-scale diffusion transformer.</p>
-            <span class="project-link">Project Page</span>
+
+        <a class="work-index-row" href="https://w2genai-lab.github.io/LucidFlux/" target="_blank"
+            rel="noopener noreferrer">
+            <span class="work-index-number">03</span>
+            <div class="work-index-title">
+                <span class="work-index-meta">ICLR 2026</span>
+                <h3>LucidFlux</h3>
+            </div>
+            <p>A caption-free 14B diffusion transformer for universal, photorealistic image restoration.</p>
+            <span class="work-index-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="project-card" href="https://ephemeral182.github.io/PosterCraft/" target="_blank" rel="noopener noreferrer">
-            <span class="work-meta">ICLR 2026</span>
-            <h3>PosterCraft</h3>
+
+        <a class="work-index-row" href="https://ephemeral182.github.io/PosterCraft/" target="_blank"
+            rel="noopener noreferrer">
+            <span class="work-index-number">04</span>
+            <div class="work-index-title">
+                <span class="work-index-meta">ICLR 2026</span>
+                <h3>PosterCraft</h3>
+            </div>
             <p>A unified framework for high-quality aesthetic poster generation with strong visual control.</p>
-            <span class="project-link">Project Page</span>
+            <span class="work-index-arrow" aria-hidden="true">↗</span>
         </a>
     </div>
 </section>

@@ -1,5 +1,5 @@
 baseURL: "https://owen718.github.io/"
-title: Tian YE@HKUST,Guangzhou
+title: Tian (Owen) Ye
 pagination: 
   pagerSize: 20
 theme: PaperMod
@@ -18,10 +18,10 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   math: true # Enable KaTeX math rendering
-  title: Tian YE
-  description: "AIGC, Diffusion Models, and Foundation Models researcher at HKUST(GZ)"
+  title: Tian (Owen) Ye
+  description: "Generative vision and foundation models researcher at HKUST(GZ) and NVIDIA Research"
   keywords: ["computer vision", "deep learning", "researcher"]
-  author: Tian YE
+  author: Tian (Owen) Ye
   # images: ["imgs/profile.jpg"]
   defaultTheme: light
   disableThemeToggle: true
@@ -55,9 +55,7 @@ params:
     msapplication_TileColor: "#FFFFFF"
 
   label:
-    text:
-    icon: /hkust_logo_blue.jpg
-    iconHeight: 
+    text: Tian (Owen) Ye
 
   # profile-mode
   profileMode:

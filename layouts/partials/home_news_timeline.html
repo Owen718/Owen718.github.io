@@ -1,117 +1,167 @@
-<section id="news-highlights" class="home-section reveal-on-scroll">
-    <div class="section-heading">
+<section id="news-highlights" class="editorial-section news-editorial reveal-on-scroll"
+    aria-labelledby="news-title">
+    <header class="editorial-section-head">
+        <p class="editorial-section-number" aria-hidden="true">03</p>
         <div>
-            <p class="section-kicker">News</p>
-            <h2>Recent updates from papers, releases, and talks.</h2>
+            <p class="editorial-label">News</p>
+            <h2 id="news-title">Recent notes and releases.</h2>
         </div>
-    </div>
-    <div class="news-layout">
-        <div class="news-timeline" aria-label="Recent news updates">
-            <article class="news-item">
-                <p class="news-date">2026.07</p>
-                <div class="news-copy">We release <a href="https://nvlabs.github.io/Sana/Sol-Attn/" target="_blank" rel="noopener noreferrer">Sol-Attn</a>, a training-free sparse attention method delivering over 2× end-to-end acceleration for video generation while preserving quality—up to 5× with Sol-Engine.</div>
+    </header>
+
+    <div class="news-editorial-layout">
+        <div class="news-feed">
+            <article class="news-feed-item">
+                <time datetime="2026-07">2026.07</time>
+                <p>We release <a href="https://nvlabs.github.io/Sana/Sol-Attn/" target="_blank"
+                        rel="noopener noreferrer">Sol-Attn</a>, a training-free sparse attention method delivering over
+                    2× end-to-end acceleration for video generation while preserving quality—up to 5× with Sol-Engine.</p>
             </article>
-            <article class="news-item">
-                <p class="news-date">2026.07</p>
-                <div class="news-copy">We release <a href="https://nvlabs.github.io/Sana/Video2/" target="_blank" rel="noopener noreferrer">SANA-Video 2.0</a>, open-source 5B and 14B hybrid video diffusion transformers for high-quality 720p generation—producing a five-second video in 13.06 seconds on a single H100 with Sol-Engine.</div>
+            <article class="news-feed-item">
+                <time datetime="2026-07">2026.07</time>
+                <p>We release <a href="https://nvlabs.github.io/Sana/Video2/" target="_blank"
+                        rel="noopener noreferrer">SANA-Video 2.0</a>, open-source 5B and 14B hybrid video diffusion
+                    transformers for high-quality 720p generation.</p>
             </article>
-            <article class="news-item">
-                <p class="news-date">2026.06</p>
-                <div class="news-copy">I passed my PhD Qualifying Examination (PQE) and advanced to PhD candidacy.</div>
+            <article class="news-feed-item">
+                <time datetime="2026-06">2026.06</time>
+                <p>I passed my PhD Qualifying Examination and advanced to PhD candidacy.</p>
             </article>
-            <article class="news-item">
-                <p class="news-date">2026.05</p>
-                <div class="news-copy">We release <a href="https://nvlabs.github.io/Sana/WM/" target="_blank" rel="noopener noreferrer">SANA-WM</a>, an open-source world model for 720p, minute-scale video generation with precise 6-DoF camera control.</div>
+            <article class="news-feed-item">
+                <time datetime="2026-05">2026.05</time>
+                <p>We release <a href="https://nvlabs.github.io/Sana/WM/" target="_blank"
+                        rel="noopener noreferrer">SANA-WM</a>, an open-source world model for 720p, minute-scale video
+                    generation with precise 6-DoF camera control.</p>
             </article>
-            <article class="news-item">
-                <p class="news-date">2026.04</p>
-                <div class="news-copy"><a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">UltraFlux</a> is selected as <strong>CVPR 2026 Highlight</strong> (top 3%).</div>
+            <article class="news-feed-item">
+                <time datetime="2026-04">2026.04</time>
+                <p><a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank"
+                        rel="noopener noreferrer">UltraFlux</a> is selected as <strong>CVPR 2026 Highlight</strong>
+                    (top 3%).</p>
             </article>
-            <article class="news-item">
-                <p class="news-date">2026.03</p>
-                <div class="news-copy">Our paper “Improved and Accelerated Text-to-Image Generation with Collect, Reflect, and Refine” is accepted by IEEE TPAMI.</div>
+            <article class="news-feed-item">
+                <time datetime="2026-03">2026.03</time>
+                <p>“Improved and Accelerated Text-to-Image Generation with Collect, Reflect, and Refine” is accepted by
+                    IEEE TPAMI.</p>
             </article>
-            <article class="news-item">
-                <p class="news-date">2026.02</p>
-                <div class="news-copy"><a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">UltraFlux</a>, <a href="https://ephemeral182.github.io/PosterOmni/" target="_blank" rel="noopener noreferrer">PosterOmni</a>, and <a href="https://weichow23.github.io/EditMGT/" target="_blank" rel="noopener noreferrer">EditMGT</a> are accepted by CVPR 2026.</div>
+            <article class="news-feed-item">
+                <time datetime="2026-02">2026.02</time>
+                <p><a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank"
+                        rel="noopener noreferrer">UltraFlux</a>, <a href="https://ephemeral182.github.io/PosterOmni/"
+                        target="_blank" rel="noopener noreferrer">PosterOmni</a>, and <a
+                        href="https://weichow23.github.io/EditMGT/" target="_blank"
+                        rel="noopener noreferrer">EditMGT</a> are accepted by CVPR 2026.</p>
             </article>
-            <article class="news-item">
-                <p class="news-date">2026.01</p>
-                <div class="news-copy"><a href="https://w2genai-lab.github.io/LucidFlux/" target="_blank" rel="noopener noreferrer">LucidFlux</a> and <a href="https://ephemeral182.github.io/PosterCraft/" target="_blank" rel="noopener noreferrer">PosterCraft</a> are accepted by ICLR 2026.</div>
+            <article class="news-feed-item">
+                <time datetime="2026-01">2026.01</time>
+                <p><a href="https://w2genai-lab.github.io/LucidFlux/" target="_blank"
+                        rel="noopener noreferrer">LucidFlux</a> and <a
+                        href="https://ephemeral182.github.io/PosterCraft/" target="_blank"
+                        rel="noopener noreferrer">PosterCraft</a> are accepted by ICLR 2026.</p>
             </article>
-            <article class="news-item">
-                <p class="news-date">2025.11</p>
-                <div class="news-copy">We release <a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">UltraFlux</a>, a SOTA native 4K text-to-image generation model.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.09</p>
-                <div class="news-copy">We release <a href="https://w2genai-lab.github.io/LucidFlux/" target="_blank" rel="noopener noreferrer">LucidFlux-14B</a>, a caption-free universal image restoration diffusion transformer.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.08</p>
-                <div class="news-copy">Our <a href="https://huggingface.co/Owen777/Kontext-Style-Loras" target="_blank" rel="noopener noreferrer">Style LoRA series</a> for FLUX.1 Kontext surpassed 30K downloads and 100+ likes on Hugging Face. <a href="https://huggingface.co/Kontext-Style" target="_blank" rel="noopener noreferrer">Demo and LoRAs</a>.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.08</p>
-                <div class="news-copy"><a href="https://arxiv.org/pdf/2404.17176" target="_blank" rel="noopener noreferrer">MovieChat+</a> is accepted by IEEE TPAMI 2025.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.08</p>
-                <div class="news-copy">We release <a href="https://huggingface.co/Owen777/flux.1-lite-8B-GRPO" target="_blank" rel="noopener noreferrer">Flux.1-lite-8B-GRPO</a>, an RL post-trained high-quality model based on Flux.1 Lite.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.06</p>
-                <div class="news-copy">Three papers are accepted by ICCV 2025.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.06</p>
-                <div class="news-copy">We release <a href="https://ephemeral182.github.io/PosterCraft/" target="_blank" rel="noopener noreferrer">PosterCraft</a>, a unified framework for high-quality aesthetic poster generation.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.03</p>
-                <div class="news-copy">We release <a href="https://magicinfinite.github.io" target="_blank" rel="noopener noreferrer">MagicInfinite</a> (Hedra Character-3), enabling fast infinite talking-video generation from words and voice.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.02</p>
-                <div class="news-copy">Three papers are accepted by CVPR 2025.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.02</p>
-                <div class="news-copy">We release <a href="https://magic-141.github.io/Magic-141/" target="_blank" rel="noopener noreferrer">Magic 1-For-1</a>, a four-step image-to-video diffusion model, together with the technical report.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2025.01</p>
-                <div class="news-copy">Selected as a speaker at the <a href="https://www.kaust.edu.sa/en/news/rising-stars-in-ai-symposium-2025" target="_blank" rel="noopener noreferrer">KAUST Rising Stars in AI Symposium 2025</a>.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2024.11</p>
-                <div class="news-copy">Selected as an Outstanding Reviewer for BMVC 2024.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2024.11</p>
-                <div class="news-copy">We release Meissonic on Hugging Face, the first SDXL-level high-resolution non-autoregressive text-to-image model.</div>
-            </article>
-            <article class="news-item">
-                <p class="news-date">2024.09</p>
-                <div class="news-copy">Two papers are accepted by ECCV 2024.</div>
-            </article>
+
+            <details class="news-archive">
+                <summary>Earlier updates <span aria-hidden="true">+</span></summary>
+                <div class="news-archive-list">
+                    <article class="news-feed-item">
+                        <time datetime="2025-11">2025.11</time>
+                        <p>We release <a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank"
+                                rel="noopener noreferrer">UltraFlux</a>, a SOTA native 4K text-to-image generation model.
+                        </p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-09">2025.09</time>
+                        <p>We release <a href="https://w2genai-lab.github.io/LucidFlux/" target="_blank"
+                                rel="noopener noreferrer">LucidFlux-14B</a>, a caption-free universal image restoration
+                            diffusion transformer.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-08">2025.08</time>
+                        <p>Our <a href="https://huggingface.co/Owen777/Kontext-Style-Loras" target="_blank"
+                                rel="noopener noreferrer">Style LoRA series</a> for FLUX.1 Kontext surpassed 30K
+                            downloads and 100+ likes on Hugging Face.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-08">2025.08</time>
+                        <p><a href="https://arxiv.org/pdf/2404.17176" target="_blank"
+                                rel="noopener noreferrer">MovieChat+</a> is accepted by IEEE TPAMI 2025.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-08">2025.08</time>
+                        <p>We release <a href="https://huggingface.co/Owen777/flux.1-lite-8B-GRPO" target="_blank"
+                                rel="noopener noreferrer">Flux.1-lite-8B-GRPO</a>, an RL post-trained model based on
+                            Flux.1 Lite.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-06">2025.06</time>
+                        <p>Three papers are accepted by ICCV 2025.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-06">2025.06</time>
+                        <p>We release <a href="https://ephemeral182.github.io/PosterCraft/" target="_blank"
+                                rel="noopener noreferrer">PosterCraft</a>, a unified framework for high-quality aesthetic
+                            poster generation.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-03">2025.03</time>
+                        <p>We release <a href="https://magicinfinite.github.io" target="_blank"
+                                rel="noopener noreferrer">MagicInfinite</a> (Hedra Character-3) for fast, infinite
+                            talking-video generation.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-02">2025.02</time>
+                        <p>Three papers are accepted by CVPR 2025.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-02">2025.02</time>
+                        <p>We release <a href="https://magic-141.github.io/Magic-141/" target="_blank"
+                                rel="noopener noreferrer">Magic 1-For-1</a>, a four-step image-to-video diffusion model.
+                        </p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2025-01">2025.01</time>
+                        <p>Selected as a speaker at the <a
+                                href="https://www.kaust.edu.sa/en/news/rising-stars-in-ai-symposium-2025" target="_blank"
+                                rel="noopener noreferrer">KAUST Rising Stars in AI Symposium 2025</a>.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2024-11">2024.11</time>
+                        <p>Selected as an Outstanding Reviewer for BMVC 2024.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2024-11">2024.11</time>
+                        <p>We release Meissonic on Hugging Face, the first SDXL-level high-resolution non-autoregressive
+                            text-to-image model.</p>
+                    </article>
+                    <article class="news-feed-item">
+                        <time datetime="2024-09">2024.09</time>
+                        <p>Two papers are accepted by ECCV 2024.</p>
+                    </article>
+                </div>
+            </details>
         </div>
-        <div class="highlight-stack">
-            <article class="highlight-card">
-                <span class="highlight-label">Highlight</span>
-                <h3>CVPR 2026</h3>
-                <p><a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">UltraFlux</a> is selected as <strong>Highlight</strong> (top 3%). Also check <a href="https://ephemeral182.github.io/PosterOmni/" target="_blank" rel="noopener noreferrer">PosterOmni</a> and <a href="https://weichow23.github.io/EditMGT/" target="_blank" rel="noopener noreferrer">EditMGT</a>.</p>
-            </article>
-            <article class="highlight-card">
-                <span class="highlight-label">Highlight</span>
-                <h3>ICLR 2026</h3>
-                <p><a href="https://w2genai-lab.github.io/LucidFlux/" target="_blank" rel="noopener noreferrer">LucidFlux</a> and <a href="https://ephemeral182.github.io/PosterCraft/" target="_blank" rel="noopener noreferrer">PosterCraft</a> are accepted by ICLR 2026.</p>
-            </article>
-            <article class="highlight-card">
-                <span class="highlight-label">Highlight</span>
-                <h3>Recent Releases</h3>
-                <p>Recent releases include <a href="https://nvlabs.github.io/Sana/Sol-Attn/" target="_blank" rel="noopener noreferrer">Sol-Attn</a>, <a href="https://nvlabs.github.io/Sana/Video2/" target="_blank" rel="noopener noreferrer">SANA-Video 2.0</a>, <a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">UltraFlux</a>, and <a href="https://nvlabs.github.io/Sana/WM/" target="_blank" rel="noopener noreferrer">SANA-WM</a>.</p>
-            </article>
-        </div>
+
+        <aside class="release-index" aria-labelledby="release-index-title">
+            <p class="editorial-label" id="release-index-title">Recent releases</p>
+            <a href="https://nvlabs.github.io/Sana/Sol-Attn/" target="_blank" rel="noopener noreferrer">
+                <span>01</span>
+                <strong>Sol-Attn</strong>
+                <em>Sparse attention</em>
+            </a>
+            <a href="https://nvlabs.github.io/Sana/Video2/" target="_blank" rel="noopener noreferrer">
+                <span>02</span>
+                <strong>SANA-Video 2.0</strong>
+                <em>Video generation</em>
+            </a>
+            <a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">
+                <span>03</span>
+                <strong>UltraFlux</strong>
+                <em>Native 4K synthesis</em>
+            </a>
+            <a href="https://nvlabs.github.io/Sana/WM/" target="_blank" rel="noopener noreferrer">
+                <span>04</span>
+                <strong>SANA-WM</strong>
+                <em>World modeling</em>
+            </a>
+        </aside>
     </div>
 </section>
