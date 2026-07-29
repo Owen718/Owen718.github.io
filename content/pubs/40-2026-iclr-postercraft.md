@@ -1,0 +1,25 @@
+---
+title: "PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework"
+date: 2026-01-15
+venue: ICLR 2026
+authors:
+  - name: SiXiang Chen*
+  - name: Jianyu Lai*
+  - name: Jialin Gao*
+  - name: <strong>Tian Ye</strong>
+  - name: Haoyu Chen
+  - name: Hengyu Shi
+  - name: Shitong Shao
+  - name: Yunlong Lin
+  - name: Song Fei
+  - name: Zhaohu Xing
+  - name: Yeying Jin
+  - name: Junfeng Luo
+  - name: Xiaoming Wei
+  - name: Lei Zhu
+arxiv: https://arxiv.org/abs/2506.10741
+code: https://github.com/Ephemeral182/PosterCraft
+page: https://ephemeral182.github.io/PosterCraft/
+summary: A unified framework for high-quality aesthetic poster generation with precise text rendering, strong layouts, and visual-language refinement.
+selected: false
+---
