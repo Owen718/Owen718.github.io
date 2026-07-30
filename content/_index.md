@@ -3,4 +3,4 @@ title: "Home"
 layout: "home"
 ---
 
-Tian (Owen) Ye is a PhD Candidate at HKUST(GZ) working on generative AI, diffusion models, and foundation models, with research spanning high-resolution generation, universal image restoration, open-source systems, and product-facing visual intelligence.
+Tian (Owen) Ye is a PhD Candidate at HKUST(GZ) and Research Intern at NVIDIA Research working on image and video generation, world models, efficient foundation models, and automated AI systems.

@@ -19,7 +19,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   math: true # Enable KaTeX math rendering
   title: Tian (Owen) Ye
-  description: "Generative vision and foundation models researcher at HKUST(GZ) and NVIDIA Research"
+  description: "Foundation models and automated AI systems researcher at HKUST(GZ) and NVIDIA Research"
   keywords: ["computer vision", "deep learning", "researcher"]
   author: Tian (Owen) Ye
   # images: ["imgs/profile.jpg"]
