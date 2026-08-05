@@ -26,12 +26,9 @@
     </div>
 
     <figure class="editorial-portrait">
-        <div class="editorial-portrait-frame" data-profile-rotator>
-            <img class="editorial-portrait-image is-active"
-                src="{{ "/profile/portrait_2026-04.jpg" | relURL }}" alt="Portrait of Tian (Owen) Ye"
-                draggable="false" fetchpriority="high" />
-            <img class="editorial-portrait-image" src="{{ "/profile/portrait_2026-04.jpg" | relURL }}" alt=""
-                aria-hidden="true" draggable="false" />
+        <div class="editorial-portrait-frame">
+            <img id="home-random-profile-img" src="{{ "/profile/portrait_2026-04.jpg" | relURL }}"
+                alt="Portrait of Tian (Owen) Ye" draggable="false" fetchpriority="high" />
         </div>
         <figcaption>
             <span>Researching generative AI and foundation models</span>
@@ -43,72 +40,9 @@
     <script>
         (() => {
             const images = {{ $profileImages | jsonify | safeJS }};
-            const frame = document.querySelector("[data-profile-rotator]");
-            if (!frame || !Array.isArray(images) || images.length < 2) return;
-
-            const layers = Array.from(frame.querySelectorAll(".editorial-portrait-image"));
-            if (layers.length !== 2) return;
-
-            let currentIndex = Math.floor(Math.random() * images.length);
-            let activeLayer = 0;
-            let timer = null;
-            let transitioning = false;
-            const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-            layers[activeLayer].src = images[currentIndex];
-            images.forEach((src) => {
-                const preload = new Image();
-                preload.src = src;
-            });
-
-            const showNext = () => {
-                if (transitioning) return;
-
-                const nextIndex = (currentIndex + 1) % images.length;
-                const outgoing = layers[activeLayer];
-                const incomingLayer = activeLayer === 0 ? 1 : 0;
-                const incoming = layers[incomingLayer];
-                let revealed = false;
-                transitioning = true;
-
-                const reveal = () => {
-                    if (revealed) return;
-                    revealed = true;
-                    incoming.classList.add("is-active");
-                    outgoing.classList.remove("is-active");
-                    activeLayer = incomingLayer;
-                    currentIndex = nextIndex;
-                    transitioning = false;
-                };
-
-                incoming.onload = reveal;
-                incoming.onerror = () => {
-                    transitioning = false;
-                };
-                incoming.src = images[nextIndex];
-
-                if (incoming.complete && incoming.naturalWidth > 0) reveal();
-            };
-
-            const stop = () => {
-                if (timer !== null) {
-                    window.clearInterval(timer);
-                    timer = null;
-                }
-            };
-
-            const start = () => {
-                stop();
-                if (!reducedMotion.matches && document.visibilityState === "visible") {
-                    timer = window.setInterval(showNext, 6500);
-                }
-            };
-
-            document.addEventListener("visibilitychange", start);
-            if (typeof reducedMotion.addEventListener === "function") {
-                reducedMotion.addEventListener("change", start);
-            }
-            start();
+            const image = document.getElementById("home-random-profile-img");
+            if (!image || !Array.isArray(images) || images.length === 0) return;
+            image.src = images[Math.floor(Math.random() * images.length)];
         })();
     </script>
     {{- end }}
