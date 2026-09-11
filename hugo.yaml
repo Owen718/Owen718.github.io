@@ -19,8 +19,8 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   math: true # Enable KaTeX math rendering
   title: Tian (Owen) Ye
-  description: "Foundation models and automated AI systems researcher at HKUST, Guangzhou, and NVIDIA Research"
-  keywords: ["computer vision", "deep learning", "researcher"]
+  description: "Coding agents and automated research at HKUST, Guangzhou, and NVIDIA Research. Core project lead and co-first author of SoL-Pi."
+  keywords: ["coding agents", "automated research", "SoL-Pi", "multi-agent systems", "generative models"]
   author: Tian (Owen) Ye
   # images: ["imgs/profile.jpg"]
   defaultTheme: light
