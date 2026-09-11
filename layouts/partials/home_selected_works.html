@@ -3,56 +3,149 @@
         <p class="editorial-section-number" aria-hidden="true">01</p>
         <div>
             <p class="editorial-label">Selected work</p>
-            <h2 id="selected-work-title">Agents that improve through research.</h2>
+            <h2 id="selected-work-title">Selected research.</h2>
         </div>
         <a class="editorial-section-link" href="{{ "/pubs/" | relURL }}">All publications <span aria-hidden="true">↗</span></a>
     </header>
-
-    <article id="sol-pi" class="featured-research" aria-labelledby="sol-pi-title">
-        <div class="featured-research-heading">
-            <p class="editorial-label">Featured project · NVIDIA Research · 2026</p>
-            <h3 id="sol-pi-title">SoL-Pi</h3>
-            <p class="featured-research-subtitle">Scaling Auto-Research Loops for Efficient Agent Harnesses</p>
-            <p class="featured-research-role">Core project lead · Co-first author</p>
-            <nav class="editorial-hero-links" aria-label="SoL-Pi resources">
-                <a href="https://nvlabs.github.io/SoL-Pi/" target="_blank" rel="noopener noreferrer">Technical blog <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/NVlabs/SoL-Pi" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-            </nav>
-            <p class="featured-research-note">Nearly 1K GitHub stars within three days of public release.</p>
-        </div>
-        <div class="featured-research-copy">
-            <p>I co-led the automated research workflow behind SoL-Pi. Starting from 152 proposed directions, agents autonomously implemented, tested, and refined candidate mechanisms. Four survived validation to form an efficient coding-agent harness. My work spanned research priors, workflow design and implementation, and refinement of the surviving code for release.</p>
-            <p>On EdgeBench, SoL-Pi used <strong>45–49% fewer tokens</strong> and <strong>about one-third lower API-equivalent cost</strong> than Pi, retaining approximately <strong>94% of Pi’s average score</strong> across GPT-5.6 Sol and Claude Opus 5.</p>
-            <p>I also extended SoL-Pi to multi-agent search with one coordinator and 20 workers. In a two-hour kernel-optimization comparison, the SoL-Pi swarm reached <strong>17.5% fewer simulated cycles</strong> at <strong>26.8% lower API-equivalent cost</strong> than the stock-Pi swarm.</p>
-            <p class="featured-research-note">Swarm results reflect one run per configuration. See the technical blog for the evaluation protocol and limitations.</p>
-        </div>
-    </article>
-
     <div class="work-index">
-        <a class="work-index-row" href="https://ephemeral182.github.io/GenEvolve/" target="_blank" rel="noopener noreferrer">
-            <span class="work-index-number">02</span>
-            <div class="work-index-title"><span class="work-index-meta">arXiv 2026 · Contributor</span><h3>GenEvolve</h3></div>
-            <p>Self-evolving image-generation agents that learn tool use from trajectory-level visual experience.</p><span class="work-index-arrow" aria-hidden="true">↗</span>
-        </a>
-        <a class="work-index-row" href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">
-            <span class="work-index-number">03</span>
-            <div class="work-index-title"><span class="work-index-meta">CVPR 2026 Highlight · Project lead</span><h3>UltraFlux</h3></div>
-            <p>Led data-model co-design for native 4K text-to-image generation across diverse aspect ratios.</p><span class="work-index-arrow" aria-hidden="true">↗</span>
-        </a>
-        <a class="work-index-row" href="https://w2genai-lab.github.io/LucidFlux/" target="_blank" rel="noopener noreferrer">
-            <span class="work-index-number">04</span>
-            <div class="work-index-title"><span class="work-index-meta">ICLR 2026 · Project lead</span><h3>LucidFlux</h3></div>
-            <p>Led a caption-free 14B diffusion transformer for photorealistic 2K/4K image restoration.</p><span class="work-index-arrow" aria-hidden="true">↗</span>
-        </a>
-        <a class="work-index-row" href="https://huggingface.co/MeissonFlow/Meissonic" target="_blank" rel="noopener noreferrer">
-            <span class="work-index-number">05</span>
-            <div class="work-index-title"><span class="work-index-meta">ICLR 2025 · Core project leader</span><h3>Meissonic</h3></div>
-            <p>Architected an open-source masked generative transformer for non-autoregressive text-to-image synthesis at SDXL-level quality.</p><span class="work-index-arrow" aria-hidden="true">↗</span>
-        </a>
-        <a class="work-index-row" href="https://magicinfinite.github.io/" target="_blank" rel="noopener noreferrer">
-            <span class="work-index-number">06</span>
-            <div class="work-index-title"><span class="work-index-meta">Technical report 2025 · Co-first author</span><h3>MagicInfinite / Character-3</h3></div>
-            <p>Co-developed the diffusion-transformer system behind Hedra’s talking-video product.</p><span class="work-index-arrow" aria-hidden="true">↗</span>
-        </a>
+        <details id="sol-pi" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">01</span>
+                <div class="work-index-title"><span class="work-index-meta">Open source · Core project lead · Co-first author</span><h3>SoL-Pi</h3></div>
+                <p>Automated research loops that discover efficient coding-agent harnesses.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <p>I co-led the research workflow behind SoL-Pi. Starting from 152 proposed directions, agents autonomously implemented, tested, and refined candidate mechanisms; four survived validation. My work covered research priors, workflow design and implementation, and refinement of the surviving code for release.</p>
+                <p>On EdgeBench, SoL-Pi used <strong>45–49%</strong> fewer tokens and about <strong>one-third</strong> lower API-equivalent cost than Pi, retaining approximately <strong>94%</strong> of Pi’s average score across GPT-5.6 Sol and Claude Opus 5.</p>
+                <p>With one coordinator and 20 workers, the SoL-Pi swarm achieved <strong>17.5%</strong> fewer simulated cycles and <strong>26.8%</strong> lower API-equivalent cost than the stock-Pi swarm in a two-hour kernel-optimization comparison. Results reflect one run per configuration.</p>
+                <p>Nearly 1K GitHub stars within three days of public release.</p>
+                <nav class="work-card-links" aria-label="SoL-Pi resources">
+                    <a href="https://nvlabs.github.io/SoL-Pi/" target="_blank" rel="noopener noreferrer">Technical blog <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/NVlabs/SoL-Pi" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
+        <details id="genevolve" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">02</span>
+                <div class="work-index-title"><span class="work-index-meta">arXiv 2026 · Contributor</span><h3>GenEvolve</h3></div>
+                <p>Self-evolving image-generation agents that learn from tool trajectories.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <p>I contributed to GenEvolve, which combines evidence gathering, visual reference selection, and generation skills through multi-turn tool use. Visual experience distillation turns differences between higher- and lower-quality trajectories into reusable experience.</p>
+                <nav class="work-card-links" aria-label="GenEvolve resources">
+                    <a href="https://ephemeral182.github.io/GenEvolve/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/MeiGen-AI/GenEvolve" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
+        <details id="sana-wm" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">03</span>
+                <div class="work-index-title"><span class="work-index-meta">arXiv 2026 · Co-first author · Core contributor</span><h3>SANA-WM</h3></div>
+                <p>Minute-scale world modeling with camera control on one GPU.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <p>Co-developed an open-source world foundation model as a core contributor, supporting minute-scale 720p generation and precise 6-DoF camera control on one GPU.</p>
+                <nav class="work-card-links" aria-label="SANA-WM resources">
+                    <a href="https://nvlabs.github.io/Sana/WM/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
+        <details id="sana-video-2" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">04</span>
+                <div class="work-index-title"><span class="work-index-meta">Open source · 2026 · Core contributor</span><h3>SANA-Video 2.0</h3></div>
+                <p>Efficient 5B and 14B hybrid video diffusion transformers.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <p>Co-developed open-source 5B and 14B hybrid video diffusion transformers as a core contributor. The 5B stack generates a five-second 720p video in 13.06 seconds on one H100.</p>
+                <nav class="work-card-links" aria-label="SANA-Video 2.0 resources">
+                    <a href="https://nvlabs.github.io/Sana/Video2/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
+        <details id="ultraflux" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">05</span>
+                <div class="work-index-title"><span class="work-index-meta">CVPR 2026 Highlight · Project lead</span><h3>UltraFlux</h3></div>
+                <p>Data-model co-design for native 4K image generation.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <p>Led data-model co-design across the MultiAspect-4K-1M dataset, aspect-ratio-aware positional encoding, VAE post-training, and an aesthetic curriculum for native 4K synthesis.</p>
+                <nav class="work-card-links" aria-label="UltraFlux resources">
+                    <a href="https://w2genai-lab.github.io/UltraFlux/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
+        <details id="lucidflux" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">06</span>
+                <div class="work-index-title"><span class="work-index-meta">ICLR 2026 · Project lead</span><h3>LucidFlux</h3></div>
+                <p>A caption-free 14B diffusion transformer for image restoration.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <p>Led LucidFlux, which directly maps degraded images to photorealistic 2K/4K restorations without requiring captions.</p>
+                <nav class="work-card-links" aria-label="LucidFlux resources">
+                    <a href="https://w2genai-lab.github.io/LucidFlux/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
+        <details id="meissonic" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">07</span>
+                <div class="work-index-title"><span class="work-index-meta">ICLR 2025 · Core project leader</span><h3>Meissonic</h3></div>
+                <p>Non-autoregressive image synthesis at SDXL-level quality.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <p>Architected an open-source masked generative transformer for efficient high-resolution text-to-image synthesis.</p>
+                <nav class="work-card-links" aria-label="Meissonic resources">
+                    <a href="https://huggingface.co/MeissonFlow/Meissonic" target="_blank" rel="noopener noreferrer">Model and code <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
+        <details id="magicinfinite" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">08</span>
+                <div class="work-index-title"><span class="work-index-meta">Technical report 2025 · Co-first author</span><h3>Character-3</h3></div>
+                <p>The diffusion-transformer system behind Hedra’s talking-video product.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <p>Co-developed a system for arbitrary-length video generation from text, voice, and reference images. The system combines temporal coherence and speaker-aware lip sync with inference distillation for deployment in Hedra’s product.</p>
+                <nav class="work-card-links" aria-label="Character-3 resources">
+                    <a href="https://magicinfinite.github.io/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
     </div>
+    <script>
+        (() => {
+            const hover = window.matchMedia("(hover: hover) and (pointer: fine)");
+            document.querySelectorAll(".work-card").forEach(card => {
+                let openedByHover = false;
+                card.addEventListener("pointerenter", () => {
+                    if (!hover.matches || card.open) return;
+                    card.open = true;
+                    openedByHover = true;
+                });
+                card.addEventListener("pointerleave", () => {
+                    if (!openedByHover || card.contains(document.activeElement)) return;
+                    card.open = false;
+                    openedByHover = false;
+                });
+                card.addEventListener("focusout", event => {
+                    if (openedByHover && !card.contains(event.relatedTarget) && !card.matches(":hover")) {
+                        card.open = false;
+                        openedByHover = false;
+                    }
+                });
+                card.addEventListener("keydown", event => {
+                    if (event.key !== "Escape") return;
+                    card.open = false;
+                    openedByHover = false;
+                    card.querySelector("summary").focus();
+                });
+            });
+        })();
+    </script>
 </section>
