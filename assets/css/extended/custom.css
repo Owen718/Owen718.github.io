@@ -3168,10 +3168,10 @@ html.is-publication-page .main {
   margin: 0;
   color: var(--editorial-ink);
   font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(3.25rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 4.2vw, 3.75rem);
   font-weight: 500;
-  letter-spacing: -0.05em;
-  line-height: 0.96;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
 }
 
 .post-single .post-description {
@@ -3978,8 +3978,8 @@ html.is-publication-page .main {
   }
 
   .post-single .post-title {
-    font-size: clamp(2.65rem, 13vw, 3.75rem);
-    line-height: 0.99;
+    font-size: clamp(2.1rem, 9vw, 2.75rem);
+    line-height: 1.06;
   }
 
   .post-single .post-description {
