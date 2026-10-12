@@ -4103,6 +4103,9 @@ html.is-publication-page .main {
 .work-card-details { padding: 0 62px 28px 78px; max-width: none; }
 .work-card-details p { max-width: none; margin: 0 0 12px; font-size: 0.95rem; line-height: 1.6; text-align: left; text-wrap: pretty; }
 .work-card-details strong { font-weight: 600; }
+.work-card-video { margin: 0 0 20px; }
+.work-card-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #0b0d10; border: 1px solid var(--home-line); }
+.work-card-video figcaption { margin-top: 8px; color: var(--home-muted); font-size: 0.78rem; letter-spacing: 0.02em; }
 .work-card-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 18px; }
 .work-card-links a { color: var(--home-ink); font-size: 0.9rem; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 960px) { .work-card-details { padding-left: 56px; padding-right: 50px; } }
@@ -4111,5 +4114,6 @@ html.is-publication-page .main {
   .work-card > summary:hover { padding: 25px 4px 27px 0; }
   .work-card-toggle { grid-column: 3; grid-row: 1; }
   .work-card-details { padding: 0 4px 26px 56px; }
+  .work-card-video { margin-left: -56px; }
 }
 @media (prefers-reduced-motion: reduce) { .work-card-toggle { transition: none; } }

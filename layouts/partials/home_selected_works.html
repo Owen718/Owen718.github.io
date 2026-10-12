@@ -8,9 +8,30 @@
         <a class="editorial-section-link" href="{{ "/pubs/" | relURL }}">All publications <span aria-hidden="true">↗</span></a>
     </header>
     <div class="work-index">
-        <details id="sol-pi" class="work-card">
+        <details id="streamrender-h3" class="work-card">
             <summary class="work-index-row">
                 <span class="work-index-number">01</span>
+                <div class="work-index-title"><span class="work-index-meta">Research blog 2026 · Core contributor</span><h3>StreamRender-H3</h3></div>
+                <p>Interactive coding worlds rendered in real time by a streaming video model.</p><span class="work-card-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="work-card-details">
+                <figure class="work-card-video">
+                    <video controls playsinline preload="none" width="1920" height="1080" poster="{{ "/imgs/streamrender-h3-demo-poster.webp" | relURL }}" aria-describedby="streamrender-h3-video-caption">
+                        <source src="https://huggingface.co/datasets/Efficient-Large-Model/Sana-assets/resolve/main/Sol-Engine/StreamRender-H3/blog-assets/streamrender-h3-demo-71s.mp4" type="video/mp4">
+                    </video>
+                    <figcaption id="streamrender-h3-video-caption">StreamRender-H3 in the racing demo · 1080p, 71 s, with sound</figcaption>
+                </figure>
+                <p>A code game engine keeps the maps, physics, and rules of an interactive world and emits a semantic map for every frame. A two-step streaming MiniMax-H3 video model turns that stream into photorealistic video, and a reference image and a prompt can change the appearance completely.</p>
+                <p>The deployed diffusion render takes <strong>218 ms</strong> per streaming step on 8 GB200 GPUs, a <strong>3.67×</strong> speedup over the PyTorch baseline. The Fast Causal H3 VAE, built by a coding-agent loop from the released H3 VAE weights, decodes two latent frames at 720p in <strong>23.8 ms</strong> on one GB200.</p>
+                <nav class="work-card-links" aria-label="StreamRender-H3 resources">
+                    <a href="https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/" target="_blank" rel="noopener noreferrer">Technical blog <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/NVlabs/Sana/tree/sol-engine/models/streamrender_h3" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+                </nav>
+            </div>
+        </details>
+        <details id="sol-pi" class="work-card">
+            <summary class="work-index-row">
+                <span class="work-index-number">02</span>
                 <div class="work-index-title"><span class="work-index-meta">Open source · Core project lead · Co-first author</span><h3>SoL-Pi</h3></div>
                 <p>Automated research loops that discover efficient coding-agent harnesses.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -27,7 +48,7 @@
         </details>
         <details id="sol-refiner" class="work-card">
             <summary class="work-index-row">
-                <span class="work-index-number">02</span>
+                <span class="work-index-number">03</span>
                 <div class="work-index-title"><span class="work-index-meta">arXiv 2026 · Co-first author</span><h3>SoL-Refiner</h3></div>
                 <p>One-step refinement from low-resolution video to sharp 2K/4K output.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -42,7 +63,7 @@
         </details>
         <details id="genevolve" class="work-card">
             <summary class="work-index-row">
-                <span class="work-index-number">03</span>
+                <span class="work-index-number">04</span>
                 <div class="work-index-title"><span class="work-index-meta">arXiv 2026 · Contributor</span><h3>GenEvolve</h3></div>
                 <p>Self-evolving image-generation agents that learn from tool trajectories.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -56,7 +77,7 @@
         </details>
         <details id="sana-wm" class="work-card">
             <summary class="work-index-row">
-                <span class="work-index-number">04</span>
+                <span class="work-index-number">05</span>
                 <div class="work-index-title"><span class="work-index-meta">arXiv 2026 · Co-first author · Core contributor</span><h3>SANA-WM</h3></div>
                 <p>Minute-scale world modeling with camera control on one GPU.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -69,7 +90,7 @@
         </details>
         <details id="sana-video-2" class="work-card">
             <summary class="work-index-row">
-                <span class="work-index-number">05</span>
+                <span class="work-index-number">06</span>
                 <div class="work-index-title"><span class="work-index-meta">Open source · 2026</span><h3>SANA-Video 2.0</h3></div>
                 <p>Efficient 5B and 14B hybrid video diffusion transformers.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -82,7 +103,7 @@
         </details>
         <details id="ultraflux" class="work-card">
             <summary class="work-index-row">
-                <span class="work-index-number">06</span>
+                <span class="work-index-number">07</span>
                 <div class="work-index-title"><span class="work-index-meta">CVPR 2026 Highlight · Project lead</span><h3>UltraFlux</h3></div>
                 <p>Data-model co-design for native 4K image generation.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -95,7 +116,7 @@
         </details>
         <details id="lucidflux" class="work-card">
             <summary class="work-index-row">
-                <span class="work-index-number">07</span>
+                <span class="work-index-number">08</span>
                 <div class="work-index-title"><span class="work-index-meta">ICLR 2026 · Project lead</span><h3>LucidFlux</h3></div>
                 <p>A caption-free 14B diffusion transformer for image restoration.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -108,7 +129,7 @@
         </details>
         <details id="meissonic" class="work-card">
             <summary class="work-index-row">
-                <span class="work-index-number">08</span>
+                <span class="work-index-number">09</span>
                 <div class="work-index-title"><span class="work-index-meta">ICLR 2025 · Core project leader</span><h3>Meissonic</h3></div>
                 <p>Non-autoregressive image synthesis at SDXL-level quality.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -121,7 +142,7 @@
         </details>
         <details id="magicinfinite" class="work-card">
             <summary class="work-index-row">
-                <span class="work-index-number">09</span>
+                <span class="work-index-number">10</span>
                 <div class="work-index-title"><span class="work-index-meta">Technical report 2025 · Co-first author</span><h3>Character-3</h3></div>
                 <p>The diffusion-transformer system behind Hedra’s talking-video product.</p><span class="work-card-toggle" aria-hidden="true">+</span>
             </summary>
@@ -145,6 +166,7 @@
                 });
                 card.addEventListener("pointerleave", () => {
                     if (!openedByHover || card.contains(document.activeElement)) return;
+                    if ([...card.querySelectorAll("video")].some(video => !video.paused)) return;
                     card.open = false;
                     openedByHover = false;
                 });
@@ -153,6 +175,13 @@
                         card.open = false;
                         openedByHover = false;
                     }
+                });
+                // A video that starts playing keeps its card open; closing the card pauses it.
+                card.querySelectorAll("video").forEach(video => {
+                    video.addEventListener("play", () => { openedByHover = false; });
+                });
+                card.addEventListener("toggle", () => {
+                    if (!card.open) card.querySelectorAll("video").forEach(video => video.pause());
                 });
                 card.addEventListener("keydown", event => {
                     if (event.key !== "Escape") return;
