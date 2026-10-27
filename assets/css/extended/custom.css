@@ -2750,6 +2750,10 @@ html.is-homepage .js-ready .reveal-on-scroll.is-visible {
     grid-template-columns: 68px minmax(0, 1fr);
   }
 
+  .record-list-simple li {
+    grid-template-columns: 1fr;
+  }
+
   .service-ledger > div {
     grid-template-columns: 1fr;
     gap: 7px;
